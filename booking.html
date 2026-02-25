@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Now | MYS Retreat - Camping Reservations in Kearney, Ontario</title>
+    <meta name="description" content="Book your stay at MYS Retreat. Check availability for tent sites, RV sites, cottages, and RV rentals. Make your camping reservation online today.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+<body>
+    <!-- 2026 Season Banner -->
+    <div class="season-banner" id="seasonBanner">
+        <div class="season-banner-content">
+            🎉 <strong>2026 Season Opening Soon!</strong> Book your summer getaway now • Reservations filling fast
+            <a href="booking.html" class="dm-btn dm-btn-light" style="padding: 8px 20px; font-size: 12px;">Book Now</a>
+        </div>
+        <button class="season-banner-close" id="closeBanner">×</button>
+    </div>
+
+    <!-- Header -->
+    <header class="dmHeader" id="dmHeader">
+        <div class="header-inner">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="MYS Retreat" class="logo-img"></a>
+            </div>
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-container">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="activities.html" class="nav-link">Activities</a></li>
+                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li><a href="map.html" class="nav-link">Map</a></li>
+                    <li><a href="booking.html" class="nav-link nav-cta">Book Now</a></li>
+                </ul>
+            </nav>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-content">
+            <span class="section-label" style="color: var(--color-beige);">Reservations</span>
+            <h1>Book Your Stay</h1>
+            <p>Secure your spot in paradise. Check availability and reserve your perfect campsite today.</p>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-container">
+                
+                <!-- Booking Form -->
+                <div class="booking-form-wrapper">
+                    <form id="bookingForm" class="booking-form">
+                        <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 30px;">Reservation Details</h3>
+                        
+                        <!-- Dates -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Check-in Date *</label>
+                                <div class="date-picker-wrapper">
+                                    <input type="date" name="checkin" class="form-input" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Check-out Date *</label>
+                                <div class="date-picker-wrapper">
+                                    <input type="date" name="checkout" class="form-input" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Guests & Accommodation -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Number of Guests *</label>
+                                <select name="guests" class="form-select" required>
+                                    <option value="">Select guests</option>
+                                    <option value="1">1 Guest</option>
+                                    <option value="2">2 Guests</option>
+                                    <option value="3">3 Guests</option>
+                                    <option value="4">4 Guests</option>
+                                    <option value="5">5 Guests</option>
+                                    <option value="6">6+ Guests</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Accommodation Type *</label>
+                                <select name="accommodation" class="form-select" required>
+                                    <option value="">Select type</option>
+                                    <option value="tent">Tent Site</option>
+                                    <option value="rv">RV Site</option>
+                                    <option value="cottage">Cottage</option>
+                                    <option value="rv-rental">RV Rental</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin: 40px 0 30px;">Contact Information</h3>
+
+                        <!-- Name -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">First Name *</label>
+                                <input type="text" name="firstname" class="form-input" placeholder="Your first name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Last Name *</label>
+                                <input type="text" name="lastname" class="form-input" placeholder="Your last name" required>
+                            </div>
+                        </div>
+
+                        <!-- Contact -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Email *</label>
+                                <input type="email" name="email" class="form-input" placeholder="your@email.com" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Phone *</label>
+                                <input type="tel" name="phone" class="form-input" placeholder="(249) 888-6668" required>
+                            </div>
+                        </div>
+
+                        <!-- Special Requests -->
+                        <div class="form-group full-width">
+                            <label class="form-label">Special Requests</label>
+                            <textarea name="requests" class="form-textarea" placeholder="Any special requirements, questions, or requests..."></textarea>
+                        </div>
+
+                        <!-- Submit -->
+                        <div class="form-group full-width" style="text-align: center; margin-top: 30px; margin-bottom: 0;">
+                            <button type="submit" class="dm-btn dm-btn-dark" style="min-width: 250px;">Request Booking</button>
+                            <p style="margin-top: 16px; font-size: 14px; color: var(--color-primary); opacity: 0.7;">We'll confirm your reservation within 24 hours.</p>
+                        </div>
+
+                    </form>
+                </div>
+
+                <!-- Booking Info -->
+                <div class="booking-info">
+
+                    <!-- Quick Contact -->
+                    <div class="booking-info-card">
+                        <h4>Need Help?</h4>
+                        <p style="color: white; margin-bottom: 16px;">Have questions about your reservation? Call us directly!</p>
+                        <a href="tel:+12498886668" style="color: var(--color-beige); font-size: 1.25rem; font-weight: 600;">+1 (249) 888-6668</a>
+                        <p style="margin-top: 12px; font-size: 14px; opacity: 0.8;">Mon-Sun: 8:00 AM - 9:00 PM</p>
+                    </div>
+
+                    <!-- Pricing -->
+                    <div style="background: white; padding: 30px; border-radius: 2px; margin-bottom: 30px;">
+                        <h4 style="font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: 20px;">2026 Rates</h4>
+                        
+                        <div class="price-list">
+                            <div class="price-item">
+                                <span>Tent Sites</span>
+                                <span class="price">from $45/night</span>
+                            </div>
+                            <div class="price-item">
+                                <span>RV Sites</span>
+                                <span class="price">from $65/night</span>
+                            </div>
+                            <div class="price-item">
+                                <span>Cottages</span>
+                                <span class="price">from $125/night</span>
+                            </div>
+                            <div class="price-item">
+                                <span>RV Rentals</span>
+                                <span class="price">from $95/night</span>
+                            </div>
+                        </div>
+
+                        <p style="margin-top: 20px; font-size: 13px; color: var(--color-primary); opacity: 0.7;">* Prices vary by season. HST not included. Minimum stay requirements may apply on weekends and holidays.</p>
+                    </div>
+
+                    <!-- What's Included -->
+                    <div style="background: white; padding: 30px; border-radius: 2px;">
+                        <h4 style="font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: 20px;">What's Included</h4>
+                        
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: 10px 0; border-bottom: 1px solid var(--color-cream);">✓ Fire pit with grill grate</li>
+                            <li style="padding: 10px 0; border-bottom: 1px solid var(--color-cream);">✓ Picnic table</li>
+                            <li style="padding: 10px 0; border-bottom: 1px solid var(--color-cream);">✓ Access to washrooms & showers</li>
+                            <li style="padding: 10px 0; border-bottom: 1px solid var(--color-cream);">✓ Lake access</li>
+                            <li style="padding: 10px 0; border-bottom: 1px solid var(--color-cream);">✓ Hiking trails</li>
+                            <li style="padding: 10px 0;">✓ WiFi at main lodge</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Policies Section -->
+    <section class="content-section alt">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Important Information</span>
+                <h2 class="section-title">Booking Policies</h2>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; max-width: 900px; margin: 0 auto;">
+                
+                <div style="background: white; padding: 30px; border-radius: 2px;">
+                    <h4 style="font-family: var(--font-heading); margin-bottom: 16px;">Cancellation Policy</h4>
+                    <ul style="padding-left: 20px;">
+                        <li style="margin-bottom: 10px;">14+ days before: Full refund</li>
+                        <li style="margin-bottom: 10px;">7-13 days before: 50% refund</li>
+                        <li>Less than 7 days: Credit for future stay</li>
+                    </ul>
+                </div>
+
+                <div style="background: white; padding: 30px; border-radius: 2px;">
+                    <h4 style="font-family: var(--font-heading); margin-bottom: 16px;">Payment Terms</h4>
+                    <ul style="padding-left: 20px;">
+                        <li style="margin-bottom: 10px;">50% deposit required to book</li>
+                        <li style="margin-bottom: 10px;">Balance due on arrival</li>
+                        <li>Cash, credit, or e-transfer accepted</li>
+                    </ul>
+                </div>
+
+                <div style="background: white; padding: 30px; border-radius: 2px;">
+                    <h4 style="font-family: var(--font-heading); margin-bottom: 16px;">Check-in / Check-out</h4>
+                    <ul style="padding-left: 20px;">
+                        <li style="margin-bottom: 10px;">Check-in: 2:00 PM - 8:00 PM</li>
+                        <li style="margin-bottom: 10px;">Check-out: By 11:00 AM</li>
+                        <li>Late check-out by arrangement</li>
+                    </ul>
+                </div>
+
+                <div style="background: white; padding: 30px; border-radius: 2px;">
+                    <h4 style="font-family: var(--font-heading); margin-bottom: 16px;">Pet Policy</h4>
+                    <ul style="padding-left: 20px;">
+                        <li style="margin-bottom: 10px;">Pets welcome ($15/night per pet)</li>
+                        <li style="margin-bottom: 10px;">Must be leashed at all times</li>
+                        <li>Maximum 2 pets per site</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="faq.html" class="dm-btn dm-btn-outline">View All FAQs</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="content-section contact-section" id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <span class="section-label">Contact</span>
+                <h2 class="section-title">Get in Touch</h2>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="icon-location"></i>
+                        <div class="contact-text">
+                            <span class="contact-label">Location</span>
+                            <p>2900 Highway 518, Kearney, Ontario</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="icon-phone"></i>
+                        <div class="contact-text">
+                            <span class="contact-label">Phone</span>
+                            <p><a href="tel:+12498886668">+1 (249) 888-6668</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="icon-email"></i>
+                        <div class="contact-text">
+                            <span class="contact-label">Email</span>
+                            <p><a href="mailto:info@mysretreat.com">info@mysretreat.com</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="icon-hours"></i>
+                        <div class="contact-text">
+                            <span class="contact-label">Hours</span>
+                            <p>Monday-Sunday: 08:00 - 21:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-map">
+                <iframe 
+                    src="https://maps.google.com/maps?q=2900%20Highway%20518%2C%20Kearney%2C%20Ontario&t=m&z=11&output=embed&iwloc=near"
+                    title="MYS Retreat Location"
+                    aria-label="MYS Retreat Location"
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="dmFooter">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <img src="images/logo.png" alt="MYS Retreat" class="footer-logo">
+                    <p>We are a family-oriented campground located in the heart of Kearney, Ontario, with beach-front access to beautiful Himbury Lake.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook" class="social-link">FB</a>
+                        <a href="#" aria-label="Instagram" class="social-link">IG</a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="activities.html">Activities</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="map.html">Map</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Ways to Stay</h4>
+                    <ul class="footer-links">
+                        <li><a href="booking.html">Cottages</a></li>
+                        <li><a href="booking.html">Camping Tents</a></li>
+                        <li><a href="booking.html">RV Sites</a></li>
+                        <li><a href="booking.html">RV Rentals</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col footer-contact">
+                    <h4>Contact</h4>
+                    <p>Phone: +1 (249) 888-6668<br>
+                    Email: info@mysretreat.com<br>
+                    2900 Highway 518, Kearney, ON</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 MYS Retreat. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

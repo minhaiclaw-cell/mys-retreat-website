@@ -1,16 +1,50 @@
 /**
  * MYS Retreat - Main JavaScript
- * Based on Wander The Resort functionality
+ * Multi-page website functionality
  */
 
 // DOM Ready
 document.addEventListener('DOMContentLoaded', function() {
+    initSeasonBanner();
     initNavigation();
     initScrollAnimations();
     initSmoothScroll();
     initNewsletterForm();
     initHeaderScroll();
+    initFAQ();
+    initBookingForm();
+    initPopup();
 });
+
+/**
+ * 2026 Season Banner
+ */
+function initSeasonBanner() {
+    const banner = document.getElementById('seasonBanner');
+    const closeBtn = document.getElementById('closeBanner');
+    const header = document.getElementById('dmHeader');
+    
+    if (!banner) return;
+    
+    // Check if user has closed banner before
+    const bannerClosed = sessionStorage.getItem('bannerClosed');
+    
+    if (!bannerClosed) {
+        // Show banner after a short delay
+        setTimeout(() => {
+            banner.classList.add('show');
+            if (header) header.classList.add('with-banner');
+        }, 1000);
+    }
+    
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            banner.classList.remove('show');
+            if (header) header.classList.remove('with-banner');
+            sessionStorage.setItem('bannerClosed', 'true');
+        });
+    }
+}
 
 /**
  * Navigation functionality
@@ -54,6 +88,15 @@ function initNavigation() {
             });
         });
     }
+    
+    // Set active nav link based on current page
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    navLinks.forEach(link => {
+        const linkPage = link.getAttribute('href');
+        if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
+            link.classList.add('active');
+        }
+    });
 }
 
 /**
@@ -98,7 +141,7 @@ function initHeaderScroll() {
  */
 function initScrollAnimations() {
     const animatedElements = document.querySelectorAll(
-        '.stay-card, .activity-card, .feature-image, .stat'
+        '.stay-card, .activity-card, .feature-image, .stat, .reveal'
     );
     
     const observerOptions = {
@@ -114,6 +157,7 @@ function initScrollAnimations() {
                 setTimeout(() => {
                     entry.target.style.opacity = '1';
                     entry.target.style.transform = 'translateY(0)';
+                    entry.target.classList.add('active');
                 }, index * 100);
                 observer.unobserve(entry.target);
             }
@@ -121,9 +165,11 @@ function initScrollAnimations() {
     }, observerOptions);
     
     animatedElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        if (!el.classList.contains('reveal')) {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        }
         observer.observe(el);
     });
 }
@@ -179,6 +225,136 @@ function initNewsletterForm() {
             }, 1500);
         });
     }
+}
+
+/**
+ * FAQ Accordion
+ */
+function initFAQ() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    const categoryBtns = document.querySelectorAll('.faq-category-btn');
+    
+    // Accordion functionality
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        if (question) {
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                // Close all other items
+                faqItems.forEach(otherItem => {
+                    otherItem.classList.remove('active');
+                });
+                
+                // Toggle current item
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        }
+    });
+    
+    // Category filter
+    categoryBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const category = btn.dataset.category;
+            
+            // Update active button
+            categoryBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            // Filter FAQ items
+            const faqCategories = document.querySelectorAll('.faq-category-section');
+            faqCategories.forEach(cat => {
+                if (category === 'all' || cat.dataset.category === category) {
+                    cat.style.display = 'block';
+                } else {
+                    cat.style.display = 'none';
+                }
+            });
+        });
+    });
+}
+
+/**
+ * Booking Form
+ */
+function initBookingForm() {
+    const form = document.getElementById('bookingForm');
+    
+    if (form) {
+        // Set minimum date to today
+        const today = new Date().toISOString().split('T')[0];
+        const checkinInput = form.querySelector('input[name="checkin"]');
+        const checkoutInput = form.querySelector('input[name="checkout"]');
+        
+        if (checkinInput) checkinInput.min = today;
+        if (checkoutInput) checkoutInput.min = today;
+        
+        // Update checkout min when checkin changes
+        if (checkinInput) {
+            checkinInput.addEventListener('change', () => {
+                if (checkoutInput) {
+                    checkoutInput.min = checkinInput.value;
+                    if (checkoutInput.value && checkoutInput.value <= checkinInput.value) {
+                        const nextDay = new Date(new Date(checkinInput.value).getTime() + 86400000);
+                        checkoutInput.value = nextDay.toISOString().split('T')[0];
+                    }
+                }
+            });
+        }
+        
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending Request...';
+            
+            // Simulate form submission
+            setTimeout(() => {
+                showNotification('Thank you! Your booking request has been received. We\'ll contact you within 24 hours to confirm.', 'success');
+                form.reset();
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalText;
+            }, 2000);
+        });
+    }
+}
+
+/**
+ * Hero Popup for 2026 Season
+ */
+function initPopup() {
+    const popup = document.getElementById('heroPopup');
+    const closeBtn = document.getElementById('closePopup');
+    
+    if (!popup) return;
+    
+    // Check if popup was already shown
+    const popupShown = sessionStorage.getItem('heroPopupShown');
+    
+    if (!popupShown) {
+        setTimeout(() => {
+            popup.classList.add('active');
+            sessionStorage.setItem('heroPopupShown', 'true');
+        }, 2000);
+    }
+    
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            popup.classList.remove('active');
+        });
+    }
+    
+    // Close on overlay click
+    popup.addEventListener('click', (e) => {
+        if (e.target === popup) {
+            popup.classList.remove('active');
+        }
+    });
 }
 
 /**

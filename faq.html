@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | MYS Retreat - Frequently Asked Questions</title>
+    <meta name="description" content="Find answers to common questions about MYS Retreat. Check-in/out times, pet policy, cancellation policy, amenities, and more.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+<body>
+    <!-- 2026 Season Banner -->
+    <div class="season-banner" id="seasonBanner">
+        <div class="season-banner-content">
+            🎉 <strong>2026 Season Opening Soon!</strong> Book your summer getaway now • Reservations filling fast
+            <a href="booking.html" class="dm-btn dm-btn-light" style="padding: 8px 20px; font-size: 12px;">Book Now</a>
+        </div>
+        <button class="season-banner-close" id="closeBanner">×</button>
+    </div>
+
+    <!-- Header -->
+    <header class="dmHeader" id="dmHeader">
+        <div class="header-inner">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="MYS Retreat" class="logo-img"></a>
+            </div>
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-container">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="activities.html" class="nav-link">Activities</a></li>
+                    <li><a href="faq.html" class="nav-link active">FAQ</a></li>
+                    <li><a href="map.html" class="nav-link">Map</a></li>
+                    <li><a href="booking.html" class="nav-link nav-cta">Book Now</a></li>
+                </ul>
+            </nav>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-content">
+            <span class="section-label" style="color: var(--color-beige);">Help Center</span>
+            <h1>Frequently Asked Questions</h1>
+            <p>Find answers to common questions about your stay at MYS Retreat</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            
+            <!-- Category Filter -->
+            <div class="faq-categories">
+                <button class="faq-category-btn active" data-category="all">All Questions</button>
+                <button class="faq-category-btn" data-category="booking">Booking & Check-in</button>
+                <button class="faq-category-btn" data-category="policies">Policies</button>
+                <button class="faq-category-btn" data-category="amenities">Amenities</button>
+                <button class="faq-category-btn" data-category="activities">Activities</button>
+            </div>
+
+            <!-- FAQ List -->
+            <div class="faq-list">
+                
+                <!-- Booking & Check-in Category -->
+                <div class="faq-category-section" data-category="booking">
+                    <h3 class="faq-category-title">Booking & Check-in</h3>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What are your check-in and check-out times?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Check-in is from 2:00 PM to 8:00 PM. Check-out is by 11:00 AM. Early check-in or late check-out may be available upon request — please contact us in advance and we'll do our best to accommodate your needs.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>How do I make a reservation?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>You can make a reservation through our <a href="booking.html">online booking form</a>, by calling us at +1 (249) 888-6668, or by emailing info@mysretreat.com. We recommend booking in advance, especially for weekends and holidays.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Do you require a deposit?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, we require a 50% deposit at the time of booking to secure your reservation. The remaining balance is due upon arrival. For bookings during peak season (July-August), full payment may be required in advance.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Can I change my reservation dates?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, you can modify your reservation dates up to 14 days before your scheduled arrival, subject to availability. Date changes within 14 days of arrival may incur a fee. Please contact us as soon as possible if you need to make changes.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Policies Category -->
+                <div class="faq-category-section" data-category="policies">
+                    <h3 class="faq-category-title">Policies</h3>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What is your cancellation policy?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Cancellations made 14 days or more before check-in receive a full refund. Cancellations 7-13 days before receive a 50% refund. Cancellations less than 7 days before are non-refundable, but we can offer a credit for a future stay valid for one year from the original booking date.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Do you allow pets?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes! We're pet-friendly. Pets must be kept on a leash at all times and never left unattended. Please clean up after your pet. There is a $15/night pet fee per pet (maximum 2 pets per site). Certain aggressive breeds may be restricted — please contact us in advance.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Is smoking allowed?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Smoking is permitted only in designated outdoor areas and at your campsite. Smoking is strictly prohibited inside all cottages and RV rentals. Please dispose of cigarette butts properly and be mindful of fire hazards.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What is your quiet hours policy?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Quiet hours are from 10:00 PM to 8:00 AM. We ask all guests to be considerate of their neighbors during these times. Amplified music and loud gatherings should be concluded by 10:00 PM. Campfires may continue during quiet hours but should be kept at a respectful volume.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Do you offer refunds for weather-related issues?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We do not offer refunds for inclement weather. However, if severe weather (such as a severe storm warning) makes camping unsafe, we will work with you to reschedule your stay or provide a credit for a future visit.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Amenities Category -->
+                <div class="faq-category-section" data-category="amenities">
+                    <h3 class="faq-category-title">Amenities</h3>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What amenities are included with my stay?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>All sites include a fire pit with grill grate, picnic table, and access to our modern washroom facilities with hot showers. RV sites include water and electrical hookups (30/50 amp). Cottages come fully furnished with kitchenettes, bedding, and private bathrooms.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Is there WiFi available?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, we offer complimentary WiFi at the main lodge and common areas. RV sites also have WiFi access. Please note that due to our remote location, speeds may be slower than you're used to in the city. We encourage guests to unplug and enjoy nature!</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Are there laundry facilities?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, we have coin-operated laundry facilities available on-site. The laundry room is open from 8:00 AM to 9:00 PM daily. Detergent is available for purchase at the camp store.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Do you sell firewood and supplies?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes! Our camp store sells firewood, ice, basic groceries, camping supplies, and snacks. Firewood is $8 per bundle or 3 for $20. During peak season, we recommend purchasing firewood early in the day as supplies can run low.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Is there a dump station for RVs?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, we have a sanitary dump station available for RV guests. The dump station is conveniently located near the entrance and is free for guests staying with us. Non-guests may use the dump station for a $20 fee.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Activities Category -->
+                <div class="faq-category-section" data-category="activities">
+                    <h3 class="faq-category-title">Activities</h3>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Can I have a campfire?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Absolutely! Every campsite has its own fire pit. Firewood is available for purchase at our general store. Please check for any fire bans during dry conditions. Fires must be attended at all times and completely extinguished before leaving or going to sleep.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Is swimming safe in Himbury Lake?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes! Himbury Lake has crystal clear water and is safe for swimming. There's a shallow sandy entry perfect for families with young children. We recommend water shoes as there are some rocks. Life jackets are available to borrow free of charge.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Do I need a fishing license?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, an Ontario fishing license is required for anyone 18-65 years old fishing in provincial waters. Licenses can be purchased online through the Ontario government website or at local retailers in Kearney. We can provide information on where to purchase licenses nearby.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Do you rent kayaks or canoes?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, we have kayaks and canoes available for rent. Rates are $25 for a half day (4 hours) or $40 for a full day. Life jackets and paddles are included. Advance reservations are recommended, especially on weekends. We also offer sunset paddle tours on Saturday evenings.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Are there hiking trails nearby?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes! We have over 5 km of marked trails on our property winding through the pine forest. Additionally, we're just a short drive from Algonquin Provincial Park, which offers world-class hiking trails ranging from easy walks to challenging backcountry routes.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What activities are available in winter?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Winter at MYS Retreat is magical! Activities include snowshoeing on our trails, ice fishing on Himbury Lake (when ice conditions permit), cross-country skiing, and cozy campfires. Our cottages are fully winterized and heated for a comfortable stay.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Still Have Questions -->
+            <div style="text-align: center; margin-top: 60px; padding: 40px; background: var(--color-cream); border-radius: 2px;">
+                <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 16px;">Still Have Questions?</h3>
+                <p style="margin-bottom: 24px;">Can't find what you're looking for? We're here to help!</p>
+                <a href="mailto:info@mysretreat.com" class="dm-btn dm-btn-dark">Contact Us</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="dmFooter">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <img src="images/logo.png" alt="MYS Retreat" class="footer-logo">
+                    <p>We are a family-oriented campground located in the heart of Kearney, Ontario, with beach-front access to beautiful Himbury Lake.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook" class="social-link">FB</a>
+                        <a href="#" aria-label="Instagram" class="social-link">IG</a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="activities.html">Activities</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="map.html">Map</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Ways to Stay</h4>
+                    <ul class="footer-links">
+                        <li><a href="booking.html">Cottages</a></li>
+                        <li><a href="booking.html">Camping Tents</a></li>
+                        <li><a href="booking.html">RV Sites</a></li>
+                        <li><a href="booking.html">RV Rentals</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col footer-contact">
+                    <h4>Contact</h4>
+                    <p>Phone: +1 (249) 888-6668<br>
+                    Email: info@mysretreat.com<br>
+                    2900 Highway 518, Kearney, ON</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 MYS Retreat. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

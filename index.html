@@ -15,18 +15,28 @@
     <link rel="icon" type="image/png" href="images/logo.png">
 </head>
 <body>
+    <!-- 2026 Season Banner -->
+    <div class="season-banner" id="seasonBanner">
+        <div class="season-banner-content">
+            🎉 <strong>2026 Season Opening Soon!</strong> Book your summer getaway now • Reservations filling fast
+            <a href="booking.html" class="dm-btn dm-btn-light" style="padding: 8px 20px; font-size: 12px;">Book Now</a>
+        </div>
+        <button class="season-banner-close" id="closeBanner">×</button>
+    </div>
+
     <!-- Header -->
     <header class="dmHeader" id="dmHeader">
         <div class="header-inner">
             <div class="logo">
-                <a href="/"><img src="images/logo.png" alt="MYS Retreat" class="logo-img"></a>
+                <a href="index.html"><img src="images/logo.png" alt="MYS Retreat" class="logo-img"></a>
             </div>
             <nav class="main-nav" id="mainNav">
                 <ul class="nav-container">
-                    <li><a href="#stay" class="nav-link">Stay</a></li>
-                    <li><a href="#explore" class="nav-link">Explore</a></li>
-                    <li><a href="#activities" class="nav-link">Activities</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="activities.html" class="nav-link">Activities</a></li>
+                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li><a href="map.html" class="nav-link">Map</a></li>
+                    <li><a href="booking.html" class="nav-link nav-cta">Book Now</a></li>
                 </ul>
             </nav>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
@@ -44,11 +54,12 @@
             <div class="hero-overlay"></div>
         </div>
         <div class="hero-content">
-            <h1 class="hero-title">A Family Campground in the Heart of Kearney</h1>
             <p class="hero-subtitle">Welcome to MYS Retreat</p>
+            <h1 class="hero-title">A Family Campground in the Heart of Kearney</h1>
+            <p class="hero-subtitle" style="font-size: 16px; text-transform: none; letter-spacing: 0.05em; max-width: 600px; margin: 0 auto 40px;">Experience the beauty of Ontario's wilderness with creek access to Himbury Lake, surrounded by pine forests and stunning landscapes.</p>
             <div class="hero-buttons">
-                <a href="#stay" class="dm-btn dm-btn-light">Book a Stay</a>
-                <a href="#explore" class="dm-btn dm-btn-outline">Explore the Grounds</a>
+                <a href="booking.html" class="dm-btn dm-btn-light">Book Your Stay</a>
+                <a href="activities.html" class="dm-btn dm-btn-outline" style="color: white; border-color: white;">Explore Activities</a>
             </div>
         </div>
         <div class="scroll-indicator">
@@ -60,13 +71,18 @@
     <!-- Welcome Section -->
     <section class="content-section welcome-section" id="welcome">
         <div class="container">
+            <div class="section-header">
+                <span class="section-label">About Us</span>
+                <h2 class="section-title">Experience Nature at MYS Retreat</h2>
+                <p class="section-text" style="max-width: 700px; margin-left: auto; margin-right: auto;">We are a family-oriented campground located in the heart of beautiful Kearney, Ontario with creek access to Himbury Lake. Whether you are a family or a solo traveler, we are here to make your stay an enjoyable occasion.</p>
+            </div>
             <div class="row">
                 <div class="col col-text">
                     <span class="section-label">Welcome</span>
-                    <h2 class="section-title">Experience Nature at MYS Retreat</h2>
-                    <p class="section-text">We are a family-oriented campground located in the heart of beautiful Kearney, Ontario with creek access to Himbury Lake. Whether you are a family or a solo traveler, we are here to make your stay an enjoyable occasion.</p>
+                    <h3 style="font-family: var(--font-heading); font-size: 2rem; margin-bottom: 20px;">Your Home Away From Home</h3>
                     <p class="section-text">Come and relax in this beautiful, fun, and friendly environment. Get in touch with the natural beauty of Kearney amidst pine forests, lakes, and stunning mountain landscapes.</p>
-                    <a href="#stay" class="link-arrow">Explore Accommodations</a>
+                    <p class="section-text">We are looking forward to hosting you and making your stay with us a memorable one! We would love to help you with a reservation for an enjoyable camping experience year-round!</p>
+                    <a href="booking.html" class="link-arrow">Book Your Stay</a>
                 </div>
                 <div class="col col-image">
                     <img src="images/aerial.jpg" alt="MYS Retreat Aerial View" class="feature-image">
@@ -80,6 +96,7 @@
         <div class="section-header">
             <span class="section-label">Stay</span>
             <h2 class="section-title">Choose Your Experience</h2>
+            <p class="section-text" style="max-width: 600px; margin-left: auto; margin-right: auto;">From cozy cottages to spacious RV sites, we have the perfect accommodation for your getaway.</p>
         </div>
         <div class="stay-grid">
             <!-- Cottages -->
@@ -92,9 +109,11 @@
                     <span class="stay-card-label">Cottages</span>
                     <h3 class="stay-card-title">Get comfortable in our fully furnished cottages</h3>
                     <p class="stay-card-text">Enjoy modern comfort while having access to numerous trails and a private sandy beach, creating the perfect retreat for memorable moments with family and friends.</p>
-                    <a href="#contact" class="dm-btn dm-btn-light">Learn More</a>
+                    <p class="stay-card-price">Starting from $125/night</p>
+                    <a href="booking.html" class="dm-btn dm-btn-light">Book Now</a>
                 </div>
             </div>
+            
             <!-- Camping Tents -->
             <div class="stay-card">
                 <div class="stay-card-image">
@@ -105,9 +124,11 @@
                     <span class="stay-card-label">Camp Sites</span>
                     <h3 class="stay-card-title">70 Camping Tent Sites</h3>
                     <p class="stay-card-text">Embrace the essence of outdoor adventure with our rustic and immersive tent sites amid the stunning landscape of Kearney.</p>
-                    <a href="#contact" class="link-arrow">Book Now</a>
+                    <p class="stay-card-price">Starting from $45/night</p>
+                    <a href="booking.html" class="link-arrow">Book Now</a>
                 </div>
             </div>
+            
             <!-- RV Sites -->
             <div class="stay-card">
                 <div class="stay-card-image">
@@ -118,9 +139,11 @@
                     <span class="stay-card-label">RV Sites</span>
                     <h3 class="stay-card-title">35 RV Sites Available</h3>
                     <p class="stay-card-text">Discover comfort on wheels with our inviting RV sites offering the perfect blend of convenience and natural beauty.</p>
-                    <a href="#contact" class="link-arrow">Book Now</a>
+                    <p class="stay-card-price">Starting from $65/night</p>
+                    <a href="booking.html" class="link-arrow">Book Now</a>
                 </div>
             </div>
+            
             <!-- RV Rentals -->
             <div class="stay-card stay-card-wide">
                 <div class="stay-card-image">
@@ -131,56 +154,70 @@
                     <span class="stay-card-label">RV Rentals</span>
                     <h3 class="stay-card-title">5 RV Rentals</h3>
                     <p class="stay-card-text">Don't have an RV? No problem! Rent one of our fully-equipped RVs for the perfect outdoor experience.</p>
-                    <a href="#contact" class="link-arrow">Learn More</a>
+                    <p class="stay-card-price">Starting from $95/night</p>
+                    <a href="booking.html" class="link-arrow">Learn More</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Activities Section -->
+    <!-- Activities Preview Section -->
     <section class="content-section activities-section" id="activities">
         <div class="container">
-            <div class="section-header centered">
+            <div class="section-header">
                 <span class="section-label">Experience</span>
                 <h2 class="section-title">Camping Activities</h2>
+                <p class="section-text" style="max-width: 600px; margin-left: auto; margin-right: auto;">Adventure awaits at every turn. Explore our wide range of outdoor activities for all ages.</p>
             </div>
+            
             <div class="activities-grid">
                 <div class="activity-card">
                     <div class="activity-image">
                         <img src="images/campfire.jpg" alt="Camp Fire">
                     </div>
                     <div class="activity-content">
+                        <div class="activity-icon">🔥</div>
                         <h3>Camp Fire</h3>
-                        <p>🔥 Ignite your evenings with daily campfire gatherings at our family haven! Share stories, roast marshmallows, and create lasting memories.</p>
+                        <p>Ignite your evenings with daily campfire gatherings at our family haven! Share stories, roast marshmallows, and create lasting memories.</p>
                     </div>
                 </div>
+                
                 <div class="activity-card">
                     <div class="activity-image">
                         <img src="images/hiking.jpg" alt="Hiking">
                     </div>
                     <div class="activity-content">
+                        <div class="activity-icon">🥾</div>
                         <h3>Hiking</h3>
-                        <p>🌲 Embrace the wilderness with year-round trekking. Explore the natural trails surrounding our campground in every season.</p>
+                        <p>Embrace the wilderness with year-round trekking. Explore the natural trails surrounding our campground in every season.</p>
                     </div>
                 </div>
+                
                 <div class="activity-card">
                     <div class="activity-image">
                         <img src="images/fishing.jpg" alt="Fishing">
                     </div>
                     <div class="activity-content">
-                        <h3>Recreational Fishing</h3>
-                        <p>🎣 Cast away your worries with summer fishing bliss. Our location provides access to excellent fishing spots.</p>
+                        <div class="activity-icon">🎣</div>
+                        <h3>Fishing</h3>
+                        <p>Cast away your worries with summer fishing bliss. Our location provides access to excellent fishing spots at Himbury Lake.</p>
                     </div>
                 </div>
+                
                 <div class="activity-card">
                     <div class="activity-image">
                         <img src="images/kayaking.jpg" alt="Kayaking and Canoeing">
                     </div>
                     <div class="activity-content">
+                        <div class="activity-icon">🛶</div>
                         <h3>Kayaking & Canoeing</h3>
-                        <p>🛶 Paddle into paradise. Explore the waters and enjoy the tranquility of nature from a different perspective.</p>
+                        <p>Paddle into paradise. Explore the waters and enjoy the tranquility of nature from a different perspective.</p>
                     </div>
                 </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="activities.html" class="dm-btn dm-btn-outline">View All Activities</a>
             </div>
         </div>
     </section>
@@ -193,6 +230,7 @@
                 <h2 class="section-title">Gateway to Algonquin Park</h2>
                 <p class="section-text">MYS Retreat is perfectly positioned as your gateway to adventure. Located near Algonquin Provincial Park, we offer easy access to one of Ontario's most beloved natural treasures.</p>
                 <p class="section-text">Our location provides the perfect base camp for exploring the region's stunning landscapes, abundant wildlife, and endless outdoor recreational opportunities.</p>
+                
                 <div class="explore-stats">
                     <div class="stat">
                         <span class="stat-number">70</span>
@@ -212,8 +250,11 @@
                     </div>
                 </div>
             </div>
+            
             <div class="explore-map">
-                <img src="images/map.jpg" alt="MYS Retreat Map" class="map-image">
+                <a href="map.html">
+                    <img src="images/map.jpg" alt="MYS Retreat Map" class="map-image">
+                </a>
             </div>
         </div>
     </section>
@@ -224,6 +265,7 @@
             <div class="newsletter-content">
                 <h2 class="section-title">Subscribe to Newsletter</h2>
                 <p>Stay updated with the latest news, special offers, and events at MYS Retreat.</p>
+                
                 <form class="newsletter-form" id="newsletterForm">
                     <input type="email" placeholder="Your E-mail" required class="newsletter-input">
                     <button type="submit" class="dm-btn dm-btn-dark">Subscribe</button>
@@ -238,6 +280,7 @@
             <div class="contact-info">
                 <span class="section-label">Contact</span>
                 <h2 class="section-title">We Are Waiting For You!</h2>
+                
                 <div class="contact-details">
                     <div class="contact-item">
                         <i class="icon-location"></i>
@@ -246,6 +289,7 @@
                             <p>2900 Highway 518, Kearney, Ontario</p>
                         </div>
                     </div>
+                    
                     <div class="contact-item">
                         <i class="icon-phone"></i>
                         <div class="contact-text">
@@ -253,6 +297,7 @@
                             <p><a href="tel:+12498886668">+1 (249) 888-6668</a></p>
                         </div>
                     </div>
+                    
                     <div class="contact-item">
                         <i class="icon-email"></i>
                         <div class="contact-text">
@@ -260,6 +305,7 @@
                             <p><a href="mailto:info@mysretreat.com">info@mysretreat.com</a></p>
                         </div>
                     </div>
+                    
                     <div class="contact-item">
                         <i class="icon-hours"></i>
                         <div class="contact-text">
@@ -269,6 +315,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="contact-map">
                 <iframe 
                     src="https://maps.google.com/maps?q=2900%20Highway%20518%2C%20Kearney%2C%20Ontario&t=m&z=11&output=embed&iwloc=near"
@@ -292,24 +339,27 @@
                         <a href="#" aria-label="Instagram" class="social-link">IG</a>
                     </div>
                 </div>
+                
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul class="footer-links">
-                        <li><a href="#welcome">Home</a></li>
-                        <li><a href="#stay">Accommodations</a></li>
-                        <li><a href="#activities">Activities</a></li>
-                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="activities.html">Activities</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="map.html">Map</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-col">
                     <h4>Ways to Stay</h4>
                     <ul class="footer-links">
-                        <li><a href="#stay">Cottages</a></li>
-                        <li><a href="#stay">Camping Tents</a></li>
-                        <li><a href="#stay">RV Sites</a></li>
-                        <li><a href="#stay">RV Rentals</a></li>
+                        <li><a href="booking.html">Cottages</a></li>
+                        <li><a href="booking.html">Camping Tents</a></li>
+                        <li><a href="booking.html">RV Sites</a></li>
+                        <li><a href="booking.html">RV Rentals</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-col footer-contact">
                     <h4>Contact</h4>
                     <p>Phone: +1 (249) 888-6668<br>
@@ -317,11 +367,23 @@
                     2900 Highway 518, Kearney, ON</p>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2025 MYS Retreat. All rights reserved.</p>
+                <p>&copy; 2026 MYS Retreat. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Hero Popup for 2026 Season -->
+    <div class="popup-overlay" id="heroPopup">
+        <div class="popup-content">
+            <button class="popup-close" id="closePopup">×</button>
+            <div style="font-size: 3rem; margin-bottom: 20px;">🎉</div>
+            <h2>2026 Season Opening Soon!</h2>
+            <p>Get ready for another amazing season at MYS Retreat! Bookings are now open for summer 2026. Reserve your spot early for the best selection of campsites and cottages.</p>
+            <a href="booking.html" class="dm-btn dm-btn-dark">Book Your Stay</a>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

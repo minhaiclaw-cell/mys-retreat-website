@@ -1,5 +1,5 @@
 /* ========================================
-   MYS Retreat - Website Styles
+   MYS Retreat - Multi-Page Website Styles
    Based on Wander The Resort Design
    ======================================== */
 
@@ -21,6 +21,7 @@
     --color-beige: #d8c8b4;
     --color-white: #ffffff;
     --color-black: #1a1a1a;
+    --color-gold: #c9a962;
     
     /* Typography */
     --font-heading: 'Playfair Display', Georgia, serif;
@@ -96,6 +97,69 @@ h1, h2, h3, h4 {
     padding: 0 40px;
 }
 
+.container-narrow {
+    max-width: 900px;
+}
+
+/* ========================================
+   2026 Season Banner
+   ======================================== */
+.season-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-accent) 100%);
+    color: var(--color-white);
+    padding: 12px 20px;
+    text-align: center;
+    z-index: 2000;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    transform: translateY(-100%);
+    transition: transform var(--transition-base);
+}
+
+.season-banner.show {
+    transform: translateY(0);
+}
+
+.season-banner.sticky {
+    position: fixed;
+}
+
+.season-banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.season-banner-close {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--color-white);
+    font-size: 20px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background var(--transition-fast);
+}
+
+.season-banner-close:hover {
+    background: rgba(255,255,255,0.2);
+}
+
 /* ========================================
    Header / Navigation
    ======================================== */
@@ -108,6 +172,10 @@ h1, h2, h3, h4 {
     background-color: var(--color-primary);
     padding: 20px 40px;
     transition: all var(--transition-base);
+}
+
+.dmHeader.with-banner {
+    top: 44px;
 }
 
 .header-inner {
@@ -132,6 +200,7 @@ h1, h2, h3, h4 {
 .nav-container {
     display: flex;
     gap: 40px;
+    align-items: center;
 }
 
 .nav-link {
@@ -156,8 +225,25 @@ h1, h2, h3, h4 {
     transition: width var(--transition-fast);
 }
 
-.nav-link:hover::after {
+.nav-link:hover::after,
+.nav-link.active::after {
     width: 100%;
+}
+
+.nav-cta {
+    background-color: var(--color-beige);
+    color: var(--color-primary) !important;
+    padding: 12px 24px;
+    border-radius: 2px;
+    font-weight: 600;
+}
+
+.nav-cta::after {
+    display: none;
+}
+
+.nav-cta:hover {
+    background-color: var(--color-cream);
 }
 
 .nav-toggle {
@@ -228,6 +314,17 @@ h1, h2, h3, h4 {
     color: var(--color-primary);
 }
 
+.dm-btn-gold {
+    background-color: var(--color-gold);
+    color: var(--color-white);
+    border-color: var(--color-gold);
+}
+
+.dm-btn-gold:hover {
+    background-color: transparent;
+    color: var(--color-gold);
+}
+
 .link-arrow {
     display: inline-flex;
     align-items: center;
@@ -260,6 +357,10 @@ h1, h2, h3, h4 {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+}
+
+.hero-section.with-banner {
+    margin-top: 44px;
 }
 
 .hero-background {
@@ -357,10 +458,50 @@ h1, h2, h3, h4 {
 }
 
 /* ========================================
+   Page Header (for inner pages)
+   ======================================== */
+.page-header {
+    position: relative;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    padding: 140px 40px 80px;
+    text-align: center;
+}
+
+.page-header.with-banner {
+    padding-top: 180px;
+}
+
+.page-header-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+}
+
+.page-header h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    color: var(--color-white);
+    margin-bottom: 16px;
+}
+
+.page-header p {
+    font-size: 1.25rem;
+    color: rgba(255,255,255,0.85);
+    font-weight: 300;
+}
+
+/* ========================================
    Content Sections
    ======================================== */
 .content-section {
     padding: var(--section-padding) 0;
+}
+
+.content-section.alt {
+    background-color: var(--color-cream);
 }
 
 .section-header {
@@ -368,8 +509,8 @@ h1, h2, h3, h4 {
     margin-bottom: 60px;
 }
 
-.section-header.centered {
-    text-align: center;
+.section-header.left {
+    text-align: left;
 }
 
 .section-label {
@@ -389,6 +530,7 @@ h1, h2, h3, h4 {
     font-weight: 400;
     color: var(--color-primary);
     line-height: 1.2;
+    margin-bottom: 20px;
 }
 
 .section-text {
@@ -397,6 +539,12 @@ h1, h2, h3, h4 {
     color: var(--color-primary);
     opacity: 0.8;
     margin-bottom: 20px;
+    max-width: 600px;
+}
+
+.section-header .section-text {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* ========================================
@@ -425,7 +573,7 @@ h1, h2, h3, h4 {
 }
 
 /* ========================================
-   Stay Section
+   Stay/Accommodations Section
    ======================================== */
 .stay-section {
     background-color: var(--color-white);
@@ -528,6 +676,13 @@ h1, h2, h3, h4 {
     max-width: 480px;
 }
 
+.stay-card-price {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-beige);
+    margin-bottom: 16px;
+}
+
 /* ========================================
    Activities Section
    ======================================== */
@@ -588,8 +743,390 @@ h1, h2, h3, h4 {
     opacity: 0.8;
 }
 
+.activity-icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+/* Activity Detail Cards (for activities page) */
+.activity-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.activity-detail.reverse {
+    direction: rtl;
+}
+
+.activity-detail.reverse > * {
+    direction: ltr;
+}
+
+.activity-detail-image {
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.activity-detail-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.activity-detail-content h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.feature-list {
+    list-style: none;
+    margin-top: 24px;
+}
+
+.feature-list li {
+    padding: 8px 0;
+    padding-left: 28px;
+    position: relative;
+    font-size: 15px;
+}
+
+.feature-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-secondary);
+    font-weight: bold;
+}
+
 /* ========================================
-   Explore Section
+   FAQ Section
+   ======================================== */
+.faq-section {
+    background-color: var(--color-white);
+    padding: var(--section-padding) 0;
+}
+
+.faq-categories {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.faq-category-btn {
+    padding: 12px 24px;
+    background: var(--color-cream);
+    border: none;
+    border-radius: 2px;
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    color: var(--color-primary);
+}
+
+.faq-category-btn:hover,
+.faq-category-btn.active {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--color-cream);
+    margin-bottom: 0;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 24px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--color-primary);
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color var(--transition-fast);
+}
+
+.faq-question:hover {
+    color: var(--color-accent);
+}
+
+.faq-icon {
+    font-size: 1.5rem;
+    transition: transform var(--transition-fast);
+    flex-shrink: 0;
+    margin-left: 20px;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-base), padding var(--transition-base);
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    padding-bottom: 24px;
+}
+
+.faq-answer p {
+    color: var(--color-primary);
+    opacity: 0.8;
+    line-height: 1.7;
+}
+
+.faq-category-section {
+    margin-bottom: 50px;
+}
+
+.faq-category-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+    color: var(--color-primary);
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--color-beige);
+}
+
+/* ========================================
+   Map Section
+   ======================================== */
+.map-section {
+    background-color: var(--color-cream);
+    padding: var(--section-padding) 0;
+}
+
+.map-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.campground-map {
+    background: var(--color-white);
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.campground-map img {
+    width: 100%;
+    height: auto;
+}
+
+.directions-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.directions-list {
+    margin: 24px 0;
+}
+
+.directions-list li {
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.directions-list li:last-child {
+    border-bottom: none;
+}
+
+.direction-number {
+    width: 32px;
+    height: 32px;
+    background: var(--color-primary);
+    color: var(--color-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.parking-info {
+    background: var(--color-white);
+    padding: 30px;
+    border-radius: 2px;
+    margin-top: 30px;
+}
+
+.parking-info h4 {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+}
+
+.google-map {
+    width: 100%;
+    height: 400px;
+    border: none;
+    border-radius: 2px;
+    margin-top: 40px;
+}
+
+/* ========================================
+   Booking Section
+   ======================================== */
+.booking-section {
+    background-color: var(--color-white);
+    padding: var(--section-padding) 0;
+}
+
+.booking-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.booking-form-wrapper {
+    background: var(--color-cream);
+    padding: 40px;
+    border-radius: 2px;
+}
+
+.booking-form h3 {
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group.full-width {
+    grid-column: span 2;
+}
+
+.form-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+    color: var(--color-primary);
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 2px;
+    font-family: var(--font-body);
+    font-size: 15px;
+    background: var(--color-white);
+    transition: border-color var(--transition-fast);
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.date-picker-wrapper {
+    position: relative;
+}
+
+.date-picker-wrapper::after {
+    content: '📅';
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.booking-info {
+    padding: 20px 0;
+}
+
+.booking-info-card {
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: 30px;
+    border-radius: 2px;
+    margin-bottom: 30px;
+}
+
+.booking-info-card h4 {
+    color: var(--color-beige);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 12px;
+}
+
+.booking-info-card p {
+    opacity: 0.9;
+    margin-bottom: 0;
+}
+
+.price-list {
+    margin-top: 30px;
+}
+
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.price-item:last-child {
+    border-bottom: none;
+}
+
+.price-item .price {
+    font-weight: 600;
+    color: var(--color-accent);
+}
+
+/* ========================================
+   Explore Section (homepage)
    ======================================== */
 .explore-section {
     background-color: var(--color-primary);
@@ -917,6 +1454,125 @@ h1, h2, h3, h4 {
 }
 
 /* ========================================
+   Popup / Modal
+   ======================================== */
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-base);
+}
+
+.popup-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-content {
+    background: var(--color-white);
+    padding: 50px;
+    border-radius: 2px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    transform: translateY(30px);
+    transition: transform var(--transition-base);
+}
+
+.popup-overlay.active .popup-content {
+    transform: translateY(0);
+}
+
+.popup-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--color-primary);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background var(--transition-fast);
+}
+
+.popup-close:hover {
+    background: var(--color-cream);
+}
+
+.popup-content h2 {
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+.popup-content p {
+    margin-bottom: 24px;
+    color: var(--color-primary);
+    opacity: 0.8;
+}
+
+/* ========================================
+   Gallery Grid
+   ======================================== */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-item-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+    opacity: 0;
+    transition: opacity var(--transition-fast);
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+}
+
+.gallery-item:hover .gallery-item-overlay {
+    opacity: 1;
+}
+
+.gallery-item-title {
+    color: var(--color-white);
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+}
+
+/* ========================================
    Responsive Design
    ======================================== */
 @media (max-width: 1024px) {
@@ -954,6 +1610,21 @@ h1, h2, h3, h4 {
     .footer-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    
+    .map-container,
+    .booking-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .activity-detail,
+    .activity-detail.reverse {
+        grid-template-columns: 1fr;
+        direction: ltr;
+    }
+    
+    .activity-detail.reverse > * {
+        direction: ltr;
+    }
 }
 
 @media (max-width: 768px) {
@@ -963,6 +1634,14 @@ h1, h2, h3, h4 {
     
     .dmHeader {
         padding: 15px 20px;
+    }
+    
+    .dmHeader.with-banner {
+        top: 0;
+    }
+    
+    .season-banner {
+        display: none;
     }
     
     .logo-img {
@@ -1001,6 +1680,10 @@ h1, h2, h3, h4 {
     
     .nav-link {
         font-size: 18px;
+    }
+    
+    .nav-cta {
+        margin-top: 20px;
     }
     
     .container {
@@ -1066,6 +1749,45 @@ h1, h2, h3, h4 {
     
     .social-links {
         justify-content: center;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-group.full-width {
+        grid-column: span 1;
+    }
+    
+    .page-header {
+        padding: 120px 20px 60px;
+    }
+    
+    .page-header.with-banner {
+        padding-top: 120px;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .booking-form-wrapper {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .faq-categories {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .faq-category-btn {
+        text-align: center;
     }
 }
 
