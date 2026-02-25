@@ -1,147 +1,88 @@
-# MYS Retreat Campground
+# MYS Retreat Website
 
-A modern, responsive campground website inspired by luxury resort aesthetics, adapted for outdoor camping experiences.
+A modern, responsive website for MYS Retreat - a family-oriented campground in Kearney, Ontario.
 
-![MYS Retreat](https://placehold.co/800x400/2d4a3e/ffffff?text=MYS+Retreat)
+## Live Site
 
-## Overview
+**URL:** https://minhaiclaw-cell.github.io/mys-retreat-website/
 
-MYS Retreat is a campground and nature escape located in the heart of the wilderness. This website showcases the campground's accommodations, activities, and booking capabilities with a clean, modern design that emphasizes natural beauty and outdoor adventure.
+## Design
+
+This website features a **Wander The Resort-inspired design** adapted for a campground/camping experience:
+
+- **Elegant typography** using Playfair Display for headings and Montserrat for body text
+- **Sophisticated color palette** with deep charcoal, warm beige, and cream tones
+- **Full-screen hero section** with parallax scrolling effect
+- **Card-based layout** for accommodations showcase
+- **Responsive design** optimized for all devices
+- **Smooth scroll animations** using Intersection Observer API
 
 ## Features
 
-- **Responsive Design** - Fully responsive layout that works beautifully on all devices
-- **Modern Aesthetics** - Clean typography with earthy, nature-inspired color palette
-- **Smooth Animations** - Scroll-triggered animations and smooth page transitions
-- **Booking Form** - Functional contact/booking form with validation
-- **Gallery** - Image gallery showcasing the campground
-- **Location Info** - Detailed directions and nearby attractions
+### Sections
+1. **Hero** - Full-screen banner with call-to-action buttons
+2. **Welcome** - Introduction to MYS Retreat
+3. **Stay** - Accommodation options (Cottages, Camp Sites, RV Sites, RV Rentals)
+4. **Activities** - Camping activities (Camp Fire, Hiking, Fishing, Kayaking)
+5. **Explore** - Location highlights and statistics
+6. **Newsletter** - Email subscription form
+7. **Contact** - Contact information with embedded Google Map
+8. **Footer** - Quick links and social media
 
-## Website Sections
+### Technical Features
+- Fixed header with scroll-based hide/show behavior
+- Mobile-responsive navigation with hamburger menu
+- Image lazy loading
+- Smooth scrolling for anchor links
+- Notification toast system
+- Newsletter form with validation
 
-1. **Hero** - Full-screen hero with compelling headline and call-to-action
-2. **Introduction** - Welcome message and campground overview
-3. **Stay** - Accommodations (Tent Sites, RV Sites, Cabins)
-4. **Experience** - Activities and outdoor adventures
-5. **Gather** - Community spaces, fire pits, and camp kitchen
-6. **Location** - Getting here, drive times, and nearby attractions
-7. **Gallery** - Photo gallery of the campground
-8. **Contact/Booking** - Reservation form and contact information
+## Assets
 
-## Technologies Used
+All images sourced from the original MYS Retreat website:
+- Logo
+- Hero background images
+- Cottage and campsite photos
+- Activity images (hiking, fishing, kayaking, campfire)
+- Campground map
 
-- **HTML5** - Semantic markup
-- **CSS3** - Custom CSS with CSS variables
-- **Vanilla JavaScript** - No external dependencies
-- **Google Fonts** - Cormorant Garamond & Inter
-- **Placeholder Images** - Using placehold.co for all images
+## Development
 
-## Color Palette
-
-| Color | Hex | Usage |
-|-------|-----|-------|
-| Forest Green | `#2d4a3e` | Primary brand color |
-| Dark Green | `#1a2d26` | Dark backgrounds |
-| Light Green | `#4a6741` | Secondary accents |
-| Earth Brown | `#5c4a3d` | Secondary color |
-| Rust | `#8b4513` | Accent/CTA color |
-| Cream | `#f5f2ed` | Light backgrounds |
-| Sand | `#e8e4df` | Section backgrounds |
-
-## File Structure
-
+### File Structure
 ```
-mys-retreat-website/
+/
 ├── index.html          # Main HTML file
-├── styles.css          # Complete stylesheet
+├── styles.css          # Main stylesheet
 ├── script.js           # JavaScript functionality
-└── README.md           # This file
+├── images/             # Image assets
+│   ├── logo.png
+│   ├── hero-bg.jpg
+│   ├── cottages.jpg
+│   ├── campsite.jpg
+│   ├── cabin.jpg
+│   ├── aerial.jpg
+│   ├── map.jpg
+│   ├── campfire.jpg
+│   ├── hiking.jpg
+│   ├── fishing.jpg
+│   ├── kayaking.jpg
+│   └── ...
+└── README.md
 ```
 
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
-
-## Performance
-
-- No external JavaScript dependencies
-- Minimal HTTP requests
-- Optimized CSS with CSS variables
-- Lazy-loading ready image structure
-- Accessible markup with ARIA labels
-
-## Setup Instructions
-
-### Local Development
-
-1. Clone or download the repository
-2. Open `index.html` in your browser
-3. No build process required - it's pure HTML/CSS/JS
-
-### Deploy to GitHub Pages
-
-1. Create a new repository on GitHub named `mys-retreat-website`
-2. Push these files to the repository:
-   ```bash
-   git remote add origin https://github.com/YOUR_USERNAME/mys-retreat-website.git
-   git push -u origin main
-   ```
-3. Go to repository Settings > Pages
-4. Select "Deploy from a branch"
-5. Choose "main" branch and "/ (root)" folder
-6. Save and wait for deployment
-
-Your site will be live at: `https://YOUR_USERNAME.github.io/mys-retreat-website/`
-
-## Customization
-
-### Changing Images
-
-Replace placeholder images by updating the `src` attributes in `index.html`:
-
-```html
-<!-- Current placeholder -->
-<img src="https://placehold.co/800x600/2d4a3e/ffffff?text=MYS+Retreat" alt="...">
-
-<!-- Replace with your image -->
-<img src="images/your-image.jpg" alt="...">
-```
-
-### Changing Colors
-
-Edit CSS variables in `styles.css`:
-
-```css
-:root {
-    --color-primary: #2d4a3e;     /* Change this */
-    --color-accent: #8b4513;       /* Change this */
-    --color-cream: #f5f2ed;        /* Change this */
-}
-```
-
-### Adding Pages
-
-This is a single-page website. To add more pages:
-
-1. Create new HTML files (e.g., `about.html`, `contact.html`)
-2. Copy the header and footer from `index.html`
-3. Update navigation links
-4. Add page-specific content
-
-## License
-
-This project is available for personal and commercial use.
+### Technologies
+- HTML5
+- CSS3 (CSS Variables, Grid, Flexbox)
+- Vanilla JavaScript (ES6+)
+- Google Fonts
+- Google Maps Embed
 
 ## Credits
 
-- Design inspired by [Wander the Resort](https://www.wandertheresort.com/)
-- Fonts: [Google Fonts](https://fonts.google.com/)
-- Icons: Custom SVG icons
+- **Design inspiration:** Wander The Resort (wandertheresort.com)
+- **Content:** MYS Retreat (mysretreat.com)
+- **Photos:** MYS Retreat
 
----
+## License
 
-&copy; 2025 MYS Retreat. All rights reserved.
+All rights reserved. Content and images belong to MYS Retreat.
