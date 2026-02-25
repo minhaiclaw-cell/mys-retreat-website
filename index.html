@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MYS Retreat | Campground & Nature Escape</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">MYS Retreat</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#stay" class="nav-link">Stay</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#gather" class="nav-link">Gather</a></li>
+                <li><a href="#location" class="nav-link">Location</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#contact" class="nav-link nav-cta">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-image">
+            <img src="https://placehold.co/1920x1080/2d4a3e/ffffff?text=MYS+Retreat+-+Nature+Escape" alt="MYS Retreat Campground">
+        </div>
+        <div class="hero-content">
+            <p class="hero-subtitle">A modern campground in the heart of the wilderness</p>
+            <h1 class="hero-title">Reconnect with Nature at MYS Retreat</h1>
+            <a href="#stay" class="btn btn-primary">Explore Camping</a>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="intro">
+        <div class="container">
+            <div class="intro-content">
+                <span class="section-label">Welcome</span>
+                <h2>Experience outdoor living at its finest</h2>
+                <p>Nestled among ancient forests and pristine lakes, MYS Retreat offers a one-of-a-kind camping experience where rustic charm meets modern comfort. Whether you prefer sleeping under the stars in a tent, bringing your RV, or cozying up in one of our handcrafted cabins, you'll find your perfect escape here.</p>
+                <a href="#stay" class="link-arrow">Explore Accommodations</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stay Section -->
+    <section class="stay" id="stay">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Stay</span>
+                <h2>Choose Your Adventure</h2>
+            </div>
+            
+            <div class="accommodations-grid">
+                <div class="accommodation-card">
+                    <div class="card-image">
+                        <img src="https://placehold.co/800x600/4a6741/ffffff?text=Tent+Sites" alt="Tent Camping Sites">
+                    </div>
+                    <div class="card-content">
+                        <h3>Tent Sites</h3>
+                        <p>Spacious, level sites nestled among the trees with fire pits and picnic tables. Perfect for traditional camping enthusiasts seeking an authentic outdoor experience.</p>
+                        <ul class="amenity-list">
+                            <li>Fire pit & grill</li>
+                            <li>Picnic table</li>
+                            <li>Potable water access</li>
+                            <li>Shared washroom facilities</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline">Book Tent Site</a>
+                    </div>
+                </div>
+
+                <div class="accommodation-card">
+                    <div class="card-image">
+                        <img src="https://placehold.co/800x600/5c4a3d/ffffff?text=RV+Sites" alt="RV Camping Sites">
+                    </div>
+                    <div class="card-content">
+                        <h3>RV Sites</h3>
+                        <p>Full-hookup sites with electricity, water, and sewer connections. Enjoy the comforts of home while surrounded by nature's beauty.</p>
+                        <ul class="amenity-list">
+                            <li>30/50 amp electric</li>
+                            <li>Water & sewer hookups</li>
+                            <li>Pull-through available</li>
+                            <li>WiFi access</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline">Book RV Site</a>
+                    </div>
+                </div>
+
+                <div class="accommodation-card">
+                    <div class="card-image">
+                        <img src="https://placehold.co/800x600/6b5b4f/ffffff?text=Cabins" alt="Cozy Cabins">
+                    </div>
+                    <div class="card-content">
+                        <h3>Cabins</h3>
+                        <p>Handcrafted cedar cabins offering the perfect blend of rustic charm and modern amenities. Wake up to birdsong and forest views.</p>
+                        <ul class="amenity-list">
+                            <li>Queen bed & bunk beds</li>
+                            <li>Mini kitchenette</li>
+                            <li>Private deck with fire pit</li>
+                            <li>Heating & air conditioning</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline">Book Cabin</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="experience-grid">
+            <div class="experience-content">
+                <span class="section-label">Experience</span>
+                <h2>Adventure Awaits</h2>
+                <p>From sunrise hikes to evening campfires, every moment at MYS Retreat offers a chance to reconnect with the natural world. Our carefully curated activities cater to all ages and adventure levels.</p>
+                
+                <div class="activities-list">
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M8 18l4-14 4 14M6 13h12"/>
+                            </svg>
+                        </div>
+                        <div class="activity-text">
+                            <h4>Hiking Trails</h4>
+                            <p>Over 15km of marked trails ranging from easy nature walks to challenging summit hikes.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+                            </svg>
+                        </div>
+                        <div class="activity-text">
+                            <h4>Lake Activities</h4>
+                            <p>Swimming, fishing, kayaking, and paddleboarding on our pristine private lake.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 007.92 12.446a9 9 0 11-8.313-12.454z"/>
+                            </svg>
+                        </div>
+                        <div class="activity-text">
+                            <h4>Night Sky Viewing</h4>
+                            <p>Minimal light pollution makes for incredible stargazing. Telescopes available.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <circle cx="12" cy="11" r="3"/>
+                            </svg>
+                        </div>
+                        <div class="activity-text">
+                            <h4>Wildlife Watching</h4>
+                            <p>Spot deer, foxes, owls, and over 100 species of birds in their natural habitat.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="#contact" class="link-arrow">Plan Your Adventure</a>
+            </div>
+            
+            <div class="experience-images">
+                <div class="exp-img img-large">
+                    <img src="https://placehold.co/600x800/3d5a4c/ffffff?text=Hiking+Trails" alt="Forest Hiking Trail">
+                </div>
+                <div class="exp-img img-small">
+                    <img src="https://placehold.co/400x500/4a6741/ffffff?text=Lake+Activities" alt="Lake Activities">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gather Section -->
+    <section class="gather" id="gather">
+        <div class="gather-grid">
+            <div class="gather-image">
+                <img src="https://placehold.co/900x1200/8b4513/ffffff?text=Campfire+Gathering" alt="Evening Campfire">
+            </div>
+            <div class="gather-content">
+                <span class="section-label">Gather</span>
+                <h2>Community by the Fire</h2>
+                <p>Some of the best memories are made gathered around a crackling fire. At MYS Retreat, we've created spaces that bring people together—whether you're roasting marshmallows with family or sharing stories with fellow campers.</p>
+                
+                <div class="gather-features">
+                    <div class="feature">
+                        <h4>Community Fire Pits</h4>
+                        <p>Large shared fire circles perfect for group gatherings and evening socials.</p>
+                    </div>
+                    <div class="feature">
+                        <h4>Camp Kitchen</h4>
+                        <p>Fully-equipped communal cooking area with stoves, sinks, and prep stations.</p>
+                    </div>
+                    <div class="feature">
+                        <h4>BBQ Areas</h4>
+                        <p>Charcoal and gas grills available for reservation at each campsite cluster.</p>
+                    </div>
+                    <div class="feature">
+                        <h4>General Store</h4>
+                        <p>Stock up on firewood, ice, camping essentials, and local provisions.</p>
+                    </div>
+                </div>
+                
+                <a href="#contact" class="btn btn-primary">Reserve a Fire Pit</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location" id="location">
+        <div class="container">
+            <div class="location-header">
+                <span class="section-label">Location</span>
+                <h2>Getting Here</h2>
+                <p class="location-intro">Tucked away in a pristine wilderness area, yet easily accessible from major cities. MYS Retreat is your convenient escape to nature.</p>
+            </div>
+            
+            <div class="location-grid">
+                <div class="location-info">
+                    <div class="info-block">
+                        <h4>Address</h4>
+                        <p>123 Wilderness Trail<br>Forest Valley, ON K0L 1L0<br>Canada</p>
+                    </div>
+                    
+                    <div class="info-block">
+                        <h4>Drive Times</h4>
+                        <ul class="drive-times">
+                            <li><span class="city">Toronto</span><span class="time">2.5 hours</span></li>
+                            <li><span class="city">Ottawa</span><span class="time">3 hours</span></li>
+                            <li><span class="city">Montreal</span><span class="time">4 hours</span></li>
+                            <li><span class="city">Kingston</span><span class="time">45 minutes</span></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-block">
+                        <h4>Nearby Attractions</h4>
+                        <ul class="attractions-list">
+                            <li>Algonquin Provincial Park (30 min)</li>
+                            <li>Bon Echo Provincial Park (45 min)</li>
+                            <li>Local farmers markets (20 min)</li>
+                            <li>Scenic lookout points (15 min)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="location-map">
+                    <div class="map-placeholder">
+                        <img src="https://placehold.co/800x600/e8e4df/5c4a3d?text=Interactive+Map+Placeholder" alt="Location Map">
+                        <a href="https://maps.google.com" target="_blank" class="map-link">Open in Google Maps</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-label">Gallery</span>
+                <h2>Moments at MYS Retreat</h2>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item large">
+                    <img src="https://placehold.co/800x600/2d4a3e/ffffff?text=Sunrise+at+the+Lake" alt="Sunrise at the Lake">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://placehold.co/400x400/4a6741/ffffff?text=Cozy+Cabin" alt="Cozy Cabin Interior">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://placehold.co/400x400/5c4a3d/ffffff?text=Forest+Trail" alt="Forest Trail">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://placehold.co/400x400/6b5b4f/ffffff?text=Campfire+Evening" alt="Campfire Evening">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://placehold.co/400x400/3d5a4c/ffffff?text=RV+Site" alt="RV Site">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://placehold.co/400x400/4a6741/ffffff?text=Kayaking" alt="Kayaking">
+                </div>
+                <div class="gallery-item large">
+                    <img src="https://placehold.co/800x600/5c4a3d/ffffff?text=Starry+Night" alt="Starry Night Sky">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact/Booking Section -->
+    <section class="contact" id="contact">
+        <div class="contact-grid">
+            <div class="contact-content">
+                <span class="section-label">Book Your Stay</span>
+                <h2>Ready to Escape?</h2>
+                <p>Reserve your spot at MYS Retreat and start counting down to your outdoor adventure. Whether it's a weekend getaway or an extended stay in nature, we're here to make your camping experience unforgettable.</p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h4>Reservations</h4>
+                        <p>1-800-MYS-CAMP<br>bookings@mysretreat.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Office Hours</h4>
+                        <p>Monday - Friday: 9am - 6pm<br>Saturday - Sunday: 8am - 8pm</p>
+                    </div>
+                </div>
+                
+                <div class="seasonal-notice">
+                    <p><strong>Season:</strong> Open May 1 - October 31<br><strong>Check-in:</strong> 3:00 PM | <strong>Check-out:</strong> 11:00 AM</p>
+                </div>
+            </div>
+            
+            <div class="booking-form">
+                <form id="bookingForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="checkIn">Check-in Date</label>
+                            <input type="date" id="checkIn" name="checkIn" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="checkOut">Check-out Date</label>
+                            <input type="date" id="checkOut" name="checkOut" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="accommodation">Accommodation Type</label>
+                        <select id="accommodation" name="accommodation" required>
+                            <option value="">Select an option</option>
+                            <option value="tent">Tent Site</option>
+                            <option value="rv">RV Site</option>
+                            <option value="cabin">Cabin</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="guests">Number of Guests</label>
+                            <select id="guests" name="guests">
+                                <option value="1">1</option>
+                                <option value="2" selected>2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6+">6+</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="pets">Pets</label>
+                            <select id="pets" name="pets">
+                                <option value="0" selected>None</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3+">3+</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Special Requests</label>
+                        <textarea id="message" name="message" rows="3"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-full">Request Booking</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">MYS Retreat</a>
+                    <p>Your gateway to outdoor adventure and natural serenity. Reconnect with what matters most.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5"/>
+                                <circle cx="12" cy="12" r="4"/>
+                                <circle cx="18" cy="6" r="1.5" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.84 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#stay">Accommodations</a></li>
+                        <li><a href="#experience">Activities</a></li>
+                        <li><a href="#gather">Gather</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="#location">Getting Here</a></li>
+                        <li><a href="#">Campground Rules</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:1-800-MYS-CAMP">1-800-MYS-CAMP</a></li>
+                        <li><a href="mailto:bookings@mysretreat.com">bookings@mysretreat.com</a></li>
+                        <li>123 Wilderness Trail<br>Forest Valley, ON</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 MYS Retreat. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
