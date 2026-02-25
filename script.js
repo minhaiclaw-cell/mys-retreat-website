@@ -1,10 +1,14 @@
 /**
  * MYS Retreat - Main JavaScript
- * Multi-page website functionality
+ * Multi-page website functionality with Lucide Icons
  */
 
 // DOM Ready
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Lucide icons
+    initLucideIcons();
+    
+    // Initialize other components
     initSeasonBanner();
     initNavigation();
     initScrollAnimations();
@@ -15,6 +19,15 @@ document.addEventListener('DOMContentLoaded', function() {
     initBookingForm();
     initPopup();
 });
+
+/**
+ * Initialize Lucide Icons
+ */
+function initLucideIcons() {
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
+}
 
 /**
  * 2026 Season Banner
@@ -215,7 +228,12 @@ function initNewsletterForm() {
             
             // Simulate submission
             submitBtn.disabled = true;
-            submitBtn.textContent = 'Subscribing...';
+            submitBtn.innerHTML = '<i data-lucide="loader-2" class="animate-spin" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-right: 6px;"></i> Subscribing...';
+            
+            // Re-render icons for the new icon
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
             
             setTimeout(() => {
                 showNotification('Thank you for subscribing! You\'ll be the first to hear about exclusive offers.', 'success');
@@ -308,17 +326,22 @@ function initBookingForm() {
             e.preventDefault();
             
             const submitBtn = form.querySelector('button[type="submit"]');
-            const originalText = submitBtn.textContent;
+            const originalText = submitBtn.innerHTML;
             
             submitBtn.disabled = true;
-            submitBtn.textContent = 'Sending Request...';
+            submitBtn.innerHTML = '<i data-lucide="loader-2" class="animate-spin" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-right: 6px;"></i> Sending Request...';
+            
+            // Re-render icons for the new icon
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
             
             // Simulate form submission
             setTimeout(() => {
                 showNotification('Thank you! Your booking request has been received. We\'ll contact you within 24 hours to confirm.', 'success');
                 form.reset();
                 submitBtn.disabled = false;
-                submitBtn.textContent = originalText;
+                submitBtn.innerHTML = originalText;
             }, 2000);
         });
     }
@@ -370,10 +393,14 @@ function showNotification(message, type = 'info') {
     // Create notification element
     const notification = document.createElement('div');
     notification.className = `notification notification-${type}`;
+    
+    const iconName = type === 'success' ? 'check-circle' : 'info';
+    
     notification.innerHTML = `
         <div class="notification-content">
+            <span class="notification-icon"><i data-lucide="${iconName}" style="width: 20px; height: 20px;"></i></span>
             <span class="notification-message">${message}</span>
-            <button class="notification-close" aria-label="Close">×</button>
+            <button class="notification-close" aria-label="Close"><i data-lucide="x" style="width: 18px; height: 18px;"></i></button>
         </div>
     `;
     
@@ -383,61 +410,80 @@ function showNotification(message, type = 'info') {
         top: 100px;
         right: 20px;
         max-width: 400px;
-        background: ${type === 'success' ? '#687e75' : '#32363c'};
+        background: ${type === 'success' ? '#06b6d4' : '#32363c'};
         color: #fff;
         padding: 20px 24px;
-        border-radius: 2px;
+        border-radius: 8px;
         box-shadow: 0 8px 30px rgba(0,0,0,0.2);
         z-index: 10000;
         animation: slideInRight 0.4s ease;
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'Inter', sans-serif;
         font-size: 14px;
         line-height: 1.5;
     `;
     
     // Add close button styles
-    const closeBtn = notification.querySelector('.notification-close');
-    closeBtn.style.cssText = `
-        background: none;
-        border: none;
-        color: #fff;
-        cursor: pointer;
-        font-size: 20px;
-        padding: 0 0 0 16px;
-        line-height: 1;
-        opacity: 0.7;
-        transition: opacity 0.2s;
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes slideInRight {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes slideOutRight {
+            from { transform: translateX(0); opacity: 1; }
+            to { transform: translateX(100%); opacity: 0; }
+        }
+        .notification-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+        .notification-close {
+            background: none;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            padding: 4px;
+            line-height: 1;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+            flex-shrink: 0;
+        }
+        .notification-close:hover {
+            opacity: 1;
+        }
+        .notification-icon {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+        }
+        .notification-message {
+            flex: 1;
+        }
+        .animate-spin {
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
     `;
     
-    closeBtn.addEventListener('mouseover', () => closeBtn.style.opacity = '1');
-    closeBtn.addEventListener('mouseout', () => closeBtn.style.opacity = '0.7');
-    
-    // Add animation keyframes
     if (!document.getElementById('notification-styles')) {
-        const style = document.createElement('style');
         style.id = 'notification-styles';
-        style.textContent = `
-            @keyframes slideInRight {
-                from { transform: translateX(100%); opacity: 0; }
-                to { transform: translateX(0); opacity: 1; }
-            }
-            @keyframes slideOutRight {
-                from { transform: translateX(0); opacity: 1; }
-                to { transform: translateX(100%); opacity: 0; }
-            }
-            .notification-content {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                gap: 16px;
-            }
-        `;
         document.head.appendChild(style);
     }
     
     document.body.appendChild(notification);
     
+    // Initialize icons in the notification
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
+    
     // Close button handler
+    const closeBtn = notification.querySelector('.notification-close');
     closeBtn.addEventListener('click', () => {
         notification.style.animation = 'slideOutRight 0.3s ease forwards';
         setTimeout(() => notification.remove(), 300);

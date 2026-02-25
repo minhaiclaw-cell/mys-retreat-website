@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Map & Directions | MYS Retreat - Campground Location</title>
-    <meta name="description" content="Find MYS Retreat campground in Kearney, Ontario. View our campground map, get directions, and learn about parking and nearby attractions.">
+    <title>Map & Directions | MYS Retreat - Campground Location in Kearney, Ontario</title>
+    <meta name="description" content="Find MYS Retreat family campground in Kearney, Ontario. Get directions from Toronto and Ottawa, view our campground map, and learn about nearby attractions including Algonquin Park.">
+    <meta name="keywords" content="MYS Retreat directions, Kearney Ontario campground location, camping near Algonquin Park, how to get to MYS Retreat, Ontario campground map">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
     
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="images/logo.png">
@@ -18,17 +22,18 @@
     <!-- 2026 Season Banner -->
     <div class="season-banner" id="seasonBanner">
         <div class="season-banner-content">
-            🎉 <strong>2026 Season Opening Soon!</strong> Book your summer getaway now • Reservations filling fast
+            <i data-lucide="party-popper" style="width: 18px; height: 18px; display: inline-block; vertical-align: middle; margin-right: 8px;"></i>
+            <strong>2026 Season Opening Soon!</strong> Book your summer getaway now • Reservations filling fast
             <a href="booking.html" class="dm-btn dm-btn-light" style="padding: 8px 20px; font-size: 12px;">Book Now</a>
         </div>
-        <button class="season-banner-close" id="closeBanner">×</button>
+        <button class="season-banner-close" id="closeBanner"><i data-lucide="x" style="width: 16px; height: 16px;"></i></button>
     </div>
 
     <!-- Header -->
     <header class="dmHeader" id="dmHeader">
         <div class="header-inner">
             <div class="logo">
-                <a href="index.html"><img src="images/logo.png" alt="MYS Retreat" class="logo-img"></a>
+                <a href="index.html"><img src="images/logo.png" alt="MYS Retreat Family Campground Logo" class="logo-img"></a>
             </div>
             <nav class="main-nav" id="mainNav">
                 <ul class="nav-container">
@@ -63,7 +68,7 @@
                 
                 <!-- Campground Map -->
                 <div class="campground-map">
-                    <img src="images/map.jpg" alt="MYS Retreat Campground Map" style="width: 100%;">
+                    <img src="images/map.jpg" alt="MYS Retreat Campground Map showing all campsites and facilities" style="width: 100%;">
                 </div>
 
                 <!-- Directions -->
@@ -72,7 +77,7 @@
                     <h2>Directions to MYS Retreat</h2>
                     
                     <div style="margin: 24px 0; padding: 20px; background: var(--color-primary); color: white; border-radius: 2px;">
-                        <strong>📍 Address</strong><br>
+                        <strong><i data-lucide="map-pin" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-right: 6px;"></i> Address</strong><br>
                         2900 Highway 518<br>
                         Kearney, Ontario P0A 1M0<br>
                         Canada
@@ -161,40 +166,40 @@
                 
                 <!-- Parking Info -->
                 <div class="parking-info" style="margin-top: 0;">
-                    <div style="font-size: 2.5rem; margin-bottom: 16px;">🅿️</div>
+                    <div style="font-size: 2.5rem; margin-bottom: 16px; color: var(--color-accent);"><i data-lucide="car" style="width: 40px; height: 40px;"></i></div>
                     <h4>Parking Information</h4>
                     <ul style="list-style: none; padding: 0;">
-                        <li style="padding: 8px 0;">✓ Free parking at all campsites</li>
-                        <li style="padding: 8px 0;">✓ 2 vehicles per site included</li>
-                        <li style="padding: 8px 0;">✓ Overflow parking available</li>
-                        <li style="padding: 8px 0;">✓ Visitor parking at main lodge</li>
-                        <li style="padding: 8px 0;">✓ RV pull-through sites available</li>
+                        <li style="padding: 8px 0;"><i data-lucide="check" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 6px;"></i> Free parking at all campsites</li>
+                        <li style="padding: 8px 0;"><i data-lucide="check" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 6px;"></i> 2 vehicles per site included</li>
+                        <li style="padding: 8px 0;"><i data-lucide="check" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 6px;"></i> Overflow parking available</li>
+                        <li style="padding: 8px 0;"><i data-lucide="check" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 6px;"></i> Visitor parking at main lodge</li>
+                        <li style="padding: 8px 0;"><i data-lucide="check" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 6px;"></i> RV pull-through sites available</li>
                     </ul>
                 </div>
 
                 <!-- Nearby Amenities -->
                 <div class="parking-info" style="margin-top: 0;">
-                    <div style="font-size: 2.5rem; margin-bottom: 16px;">🏪</div>
+                    <div style="font-size: 2.5rem; margin-bottom: 16px; color: var(--color-accent);"><i data-lucide="store" style="width: 40px; height: 40px;"></i></div>
                     <h4>Nearby Amenities</h4>
                     <ul style="list-style: none; padding: 0;">
-                        <li style="padding: 8px 0;">• Kearney General Store (5 min)</li>
-                        <li style="padding: 8px 0;">• LCBO (5 min)</li>
-                        <li style="padding: 8px 0;">• Gas station (5 min)</li>
-                        <li style="padding: 8px 0;">• Pharmacy (5 min)</li>
-                        <li style="padding: 8px 0;">• Huntsville (30 min) - Full services</li>
+                        <li style="padding: 8px 0;"><i data-lucide="circle" style="width: 6px; height: 6px; display: inline-block; vertical-align: middle; margin-right: 8px;"></i> Kearney General Store (5 min)</li>
+                        <li style="padding: 8px 0;"><i data-lucide="circle" style="width: 6px; height: 6px; display: inline-block; vertical-align: middle; margin-right: 8px;"></i> LCBO (5 min)</li>
+                        <li style="padding: 8px 0;"><i data-lucide="circle" style="width: 6px; height: 6px; display: inline-block; vertical-align: middle; margin-right: 8px;"></i> Gas station (5 min)</li>
+                        <li style="padding: 8px 0;"><i data-lucide="circle" style="width: 6px; height: 6px; display: inline-block; vertical-align: middle; margin-right: 8px;"></i> Pharmacy (5 min)</li>
+                        <li style="padding: 8px 0;"><i data-lucide="circle" style="width: 6px; height: 6px; display: inline-block; vertical-align: middle; margin-right: 8px;"></i> Huntsville (30 min) - Full services</li>
                     </ul>
                 </div>
 
                 <!-- Nearby Attractions -->
                 <div class="parking-info" style="margin-top: 0;">
-                    <div style="font-size: 2.5rem; margin-bottom: 16px;">🏔️</div>
+                    <div style="font-size: 2.5rem; margin-bottom: 16px; color: var(--color-accent);"><i data-lucide="mountain-snow" style="width: 40px; height: 40px;"></i></div>
                     <h4>Nearby Attractions</h4>
                     <ul style="list-style: none; padding: 0;">
-                        <li style="padding: 8px 0;">• Algonquin Provincial Park (20 min)</li>
-                        <li style="padding: 8px 0;">• Arrowhead Provincial Park (40 min)</li>
-                        <li style="padding: 8px 0;">• Hidden Valley Highlands (35 min)</li>
-                        <li style="padding: 8px 0;">• Kearney Dog Sled Races (winter)</li>
-                        <li style="padding: 8px 0;">• Numerous lakes for fishing</li>
+                        <li style="padding: 8px 0;"><i data-lucide="circle" style="width: 6px; height: 6px; display: inline-block; vertical-align: middle; margin-right: 8px;"></i> Algonquin Provincial Park (20 min)</li>
+                        <li style="padding: 8px 0;"><i data-lucide="circle" style="width: 6px; height: 6px; display: inline-block; vertical-align: middle; margin-right: 8px;"></i> Arrowhead Provincial Park (40 min)</li>
+                        <li style="padding: 8px 0;"><i data-lucide="circle" style="width: 6px; height: 6px; display: inline-block; vertical-align: middle; margin-right: 8px;"></i> Hidden Valley Highlands (35 min)</li>
+                        <li style="padding: 8px 0;"><i data-lucide="circle" style="width: 6px; height: 6px; display: inline-block; vertical-align: middle; margin-right: 8px;"></i> Kearney Dog Sled Races (winter)</li>
+                        <li style="padding: 8px 0;"><i data-lucide="circle" style="width: 6px; height: 6px; display: inline-block; vertical-align: middle; margin-right: 8px;"></i> Numerous lakes for fishing</li>
                     </ul>
                 </div>
 
@@ -210,7 +215,7 @@
                 <iframe 
                     class="google-map"
                     src="https://maps.google.com/maps?q=2900%20Highway%20518%2C%20Kearney%2C%20Ontario&t=m&z=13&output=embed&iwloc=near"
-                    title="MYS Retreat Google Map"
+                    title="MYS Retreat Google Map Location"
                     allowfullscreen=""
                     loading="lazy">
                 </iframe>
@@ -218,7 +223,7 @@
 
             <!-- GPS Coordinates -->
             <div style="text-align: center; margin-top: 30px; padding: 20px; background: var(--color-cream); border-radius: 2px;">
-                <strong>GPS Coordinates:</strong> 45.4833° N, 79.2275° W
+                <strong><i data-lucide="map-pin" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-right: 6px;"></i> GPS Coordinates:</strong> 45.4833° N, 79.2275° W
             </div>
 
         </div>
@@ -240,7 +245,7 @@
         <div class="footer-container">
             <div class="footer-grid">
                 <div class="footer-col footer-brand">
-                    <img src="images/logo.png" alt="MYS Retreat" class="footer-logo">
+                    <img src="images/logo.png" alt="MYS Retreat Family Campground" class="footer-logo">
                     <p>We are a family-oriented campground located in the heart of Kearney, Ontario, with beach-front access to beautiful Himbury Lake.</p>
                     <div class="social-links">
                         <a href="#" aria-label="Facebook" class="social-link">FB</a>
@@ -270,9 +275,9 @@
                 
                 <div class="footer-col footer-contact">
                     <h4>Contact</h4>
-                    <p>Phone: +1 (249) 888-6668<br>
-                    Email: info@mysretreat.com<br>
-                    2900 Highway 518, Kearney, ON</p>
+                    <p><i data-lucide="phone" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> +1 (249) 888-6668<br>
+                    <i data-lucide="mail" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> info@mysretreat.com<br>
+                    <i data-lucide="map-pin" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> 2900 Highway 518, Kearney, ON</p>
                 </div>
             </div>
             
@@ -283,5 +288,8 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>
