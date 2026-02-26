@@ -233,6 +233,31 @@ body {
                 url('https://images.unsplash.com/photo-1511497584788-876760111969?w=1600&q=80') center/cover;
 }
 
+/* Activities grid - 5 columns in 1 row on big screens */
+.activities-grid {
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important;
+    gap: 24px !important;
+}
+
+@media (max-width: 1200px) {
+    .activities-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .activities-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .activities-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
 /* Remove all decorative pine elements and patterns */
 .section-header::before,
 .section-header::after,
@@ -391,19 +416,23 @@ a:hover,
                 transparent 100%);
 }
 
-/* Hero video background - proper centering */
+/* Hero video background - full stretch on any screen */
 .hero-section {
     position: relative;
     height: 100vh;
+    width: 100vw;
     overflow: hidden;
 }
 
 .hero-video {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
     object-fit: cover;
     z-index: 0;
     pointer-events: none;
@@ -413,6 +442,8 @@ a:hover,
     position: absolute;
     inset: 0;
     overflow: hidden;
+    width: 100%;
+    height: 100%;
 }
 
 .hero-content {
@@ -425,11 +456,21 @@ a:hover,
     display: none !important;
 }
 
+/* Scroll indicator centering */
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    text-align: center;
+}
+
 @media (max-width: 768px) {
     .hero-video {
-        width: auto;
-        height: 100%;
-        min-width: 100%;
+        width: 100vw;
+        height: 56.25vw; /* 16:9 aspect ratio */
+        min-height: 100vh;
     }
 }
 
