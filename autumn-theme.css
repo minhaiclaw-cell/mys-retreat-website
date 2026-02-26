@@ -4,28 +4,41 @@
    ======================================== */
 
 :root {
-    /* Autumn Color Palette - Rich, Deep, Natural */
-    --autumn-rust: #8B4513;
-    --autumn-copper: #B87333;
-    --autumn-amber: #D4A574;
-    --autumn-moss: #4A5D23;
-    --autumn-forest: #2F4538;
-    --autumn-bark: #3E2723;
-    --autumn-leaf: #C17817;
-    --autumn-gold: #DAA520;
+    /* Autumn Color Palette - Rich, Deep, Natural (Darker) */
+    --autumn-rust: #6B3410;
+    --autumn-copper: #985A28;
+    --autumn-amber: #B48A64;
+    --autumn-moss: #3A4B1A;
+    --autumn-forest: #253528;
+    --autumn-bark: #2E1F1B;
+    --autumn-leaf: #A16214;
+    --autumn-gold: #BA8518;
     
-    /* Deep Moss Greens - Complementary to logo */
-    --moss-dark: #2C3E1F;
-    --moss-deep: #3A5228;
-    --moss-medium: #4A6B2F;
-    --moss-soft: #6B8E3D;
-    --moss-light: #8FAA5C;
+    /* Deep Moss Greens - Complementary to logo (Darker) */
+    --moss-dark: #1F2C15;
+    --moss-deep: #2A3F1E;
+    --moss-medium: #3A5225;
+    --moss-soft: #4F6B2D;
+    --moss-light: #6F8A4C;
     
-    /* Earth Browns */
-    --earth-dark: #3E2723;
-    --earth-medium: #5D4037;
-    --earth-warm: #6D4C41;
-    --earth-light: #8D6E63;
+    /* Earth Browns (Darker) */
+    --earth-dark: #2E1F1B;
+    --earth-medium: #4D3028;
+    --earth-warm: #5D3C31;
+    --earth-light: #6D5853;
+}
+
+/* Global darkening - make site overall darker */
+body {
+    filter: brightness(0.95);
+}
+
+.content-section {
+    background-color: rgba(245, 243, 240, 0.98) !important;
+}
+
+.content-section.alt {
+    background-color: rgba(240, 238, 235, 0.98) !important;
 }
 
 /* Remove ALL pine tree patterns, replace with real textures */
@@ -66,11 +79,12 @@
     background: none !important;
 }
 
-/* Newsletter - High quality Canadian forest */
+/* Newsletter - High quality Canadian forest with darker green overlay */
 .newsletter-section {
-    background: linear-gradient(135deg, rgba(44, 62, 31, 0.88) 0%, rgba(58, 82, 40, 0.88) 100%),
+    background: linear-gradient(135deg, rgba(30, 45, 22, 0.92) 0%, rgba(40, 60, 30, 0.92) 100%),
                 url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1600&q=90') center/cover !important;
     background-attachment: fixed;
+    position: relative;
 }
 
 .newsletter-section::before {
@@ -78,25 +92,39 @@
     position: absolute;
     inset: 0;
     background: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1600&q=90') center/cover;
-    filter: blur(2px);
+    filter: blur(3px) brightness(0.7);
     z-index: -1;
 }
 
-/* Explore section - Blurred moss texture */
+/* Explore section - Dark Algonquin Park photo with green highlights */
 .explore-section {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, rgba(250, 248, 245, 0.92) 100%),
-                url('https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=1600&q=80') center/cover !important;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(44, 62, 31, 0.7) 100%),
+                url('https://images.unsplash.com/photo-1600077106724-946750eeaf8c?w=1600&q=80') center/cover !important;
     background-attachment: fixed;
+    color: white !important;
 }
 
 .explore-section::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: url('https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=1600&q=80') center/cover;
-    filter: blur(8px);
+    background: url('https://images.unsplash.com/photo-1600077106724-946750eeaf8c?w=1600&q=80') center/cover;
+    filter: blur(10px) brightness(0.6);
     z-index: -1;
-    opacity: 0.4;
+}
+
+.explore-section * {
+    color: white !important;
+}
+
+.explore-section .section-label {
+    background: rgba(74, 93, 35, 0.3);
+    color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.explore-section .stat-number,
+.explore-section .stat-label {
+    color: white !important;
 }
 
 /* Activities section - Natural ground texture */
@@ -245,6 +273,37 @@ a:hover,
                 rgba(44, 62, 31, 0.7) 0%, 
                 rgba(62, 39, 35, 0.5) 50%,
                 transparent 100%);
+}
+
+/* Hero video background */
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.hero-background {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hide original hero image if it still exists */
+.hero-img {
+    display: none !important;
+}
+
+@media (max-width: 768px) {
+    .hero-video {
+        min-width: 100vw;
+        min-height: 100vh;
+    }
 }
 
 /* Price colors */

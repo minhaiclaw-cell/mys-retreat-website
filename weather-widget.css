@@ -95,8 +95,6 @@
 
 @media (max-width: 768px) {
     .weather-widget {
-        position: static;
-        margin: 20px;
-        width: calc(100% - 40px);
+        display: none !important;
     }
 }
