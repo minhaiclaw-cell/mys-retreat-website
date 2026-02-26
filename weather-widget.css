@@ -93,8 +93,29 @@
     margin: 8px 0;
 }
 
+/* Nav bar weather integration */
+.nav-weather {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--moss-dark, #2C3E1F) !important;
+    padding: 10px 16px;
+    background: rgba(74, 93, 35, 0.08);
+    border-radius: 100px;
+    margin-left: 12px;
+    white-space: nowrap;
+}
+
+.nav-weather-loading {
+    font-size: 12px;
+    color: #78716C;
+}
+
 @media (max-width: 768px) {
     .weather-widget {
+        display: none !important;
+    }
+    
+    .nav-weather {
         display: none !important;
     }
 }

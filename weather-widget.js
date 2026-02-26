@@ -1,8 +1,7 @@
 // Weather Widget - OpenWeather API integration
 async function loadWeather() {
     const weatherContent = document.getElementById('weatherContent');
-    
-    if (!weatherContent) return;
+    const navWeather = document.getElementById('navWeather');
     
     try {
         // Using Open-Meteo (free, no API key required)
@@ -44,7 +43,14 @@ async function loadWeather() {
         
         const weather = weatherCodes[current.weather_code] || { desc: 'Unknown', icon: '🌡️' };
         
-        weatherContent.innerHTML = `
+        // Update nav bar weather
+        if (navWeather) {
+            navWeather.innerHTML = `Kearney: ${Math.round(current.temperature_2m)}°C ${weather.icon}`;
+        }
+        
+        // Update widget if it exists
+        if (weatherContent) {
+            weatherContent.innerHTML = `
             <div class="weather-icon">${weather.icon}</div>
             <div class="weather-temp">${Math.round(current.temperature_2m)}°C</div>
             <div class="weather-desc">${weather.desc}</div>
@@ -59,8 +65,13 @@ async function loadWeather() {
                 </div>
             </div>
         `;
+        }
     } catch (error) {
-        weatherContent.innerHTML = `
+        if (navWeather) {
+            navWeather.innerHTML = 'Kearney';
+        }
+        if (weatherContent) {
+            weatherContent.innerHTML = `
             <div class="weather-error" style="text-align: center; color: #78716C; padding: 20px 0;">
                 Weather data currently unavailable
             </div>
