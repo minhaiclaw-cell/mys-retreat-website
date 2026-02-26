@@ -439,26 +439,21 @@ a:hover,
                 transparent 100%);
 }
 
-/* Hero video background - full stretch on any screen */
+/* Hero static background - much lighter than video */
 .hero-section {
     position: relative;
-    height: 100vh;
+    height: 80vh !important;
     width: 100vw;
     overflow: hidden;
 }
 
-.hero-video {
+.hero-image-bg {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100vw;
-    height: 100vh;
-    min-width: 100%;
-    min-height: 100%;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
+    inset: 0;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
     z-index: 0;
-    pointer-events: none;
 }
 
 .hero-background {
@@ -508,10 +503,8 @@ a:hover,
 }
 
 @media (max-width: 768px) {
-    .hero-video {
-        width: 100vw;
-        height: 56.25vw; /* 16:9 aspect ratio */
-        min-height: 100vh;
+    .hero-section {
+        height: 70vh !important;
     }
 }
 
