@@ -1,6 +1,15 @@
-# MYS Retreat Website
+# MYS Retreat Website - Version 4
 
 A modern, responsive website for MYS Retreat - a family-oriented campground in Kearney, Ontario.
+
+## Version 4 Updates (2026-02-26)
+- ✅ **Mobile view fixes:** Better responsive design for all screen sizes
+- ✅ **Navigation improvements:** Fixed z-index issues, better mobile menu
+- ✅ **Hero section:** Improved mobile layout and button stacking
+- ✅ **Grid layouts:** Single-column mobile layouts for all sections
+- ✅ **Typography:** Mobile-optimized font sizes and spacing
+- ✅ **Touch targets:** Larger buttons and interactive elements
+- ✅ **Container padding:** Consistent mobile spacing throughout
 
 ## Live Site
 

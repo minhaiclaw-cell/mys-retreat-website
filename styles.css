@@ -3097,6 +3097,7 @@ p {
         opacity: 0;
         visibility: hidden;
         transition: all var(--transition-base);
+        z-index: 9999;
     }
     
     .main-nav.active {
@@ -3107,7 +3108,82 @@ p {
     .nav-container {
         flex-direction: column;
         align-items: center;
-        gap: 8px;
+        gap: 20px;
+    }
+    
+    .nav-link {
+        font-size: 1.2rem;
+        padding: 12px 0;
+    }
+    
+    /* Hero Section Mobile Fixes */
+    .hero-title {
+        font-size: 2.2rem;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+    
+    .hero-title br {
+        display: none;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+    
+    .dm-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 16px 24px;
+    }
+    
+    .hero-content {
+        padding: 0 20px;
+        text-align: center;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+        margin-bottom: 32px;
+    }
+    
+    /* Stay Grid Mobile Fix */
+    .stay-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 0 20px;
+    }
+    
+    .stay-card-large,
+    .stay-card-wide {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    
+    /* Activities Grid Mobile */
+    .activities-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    /* Section Headers Mobile */
+    .section-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .section-text {
+        font-size: 1rem;
+        text-align: center;
+    }
+    
+    /* Container Mobile Padding */
+    .container {
+        padding: 0 20px;
     }
     
     .nav-link {
@@ -3213,6 +3289,22 @@ p {
 }
 
 @media (max-width: 480px) {
+    :root {
+        --section-padding: 40px;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .container {
+        padding: 0 16px;
+    }
+    
     .gallery-grid {
         grid-template-columns: 1fr;
     }
@@ -3233,6 +3325,37 @@ p {
     
     .stat-number {
         font-size: 2rem;
+    }
+    
+    /* Better mobile spacing */
+    .dmHeader {
+        padding: 8px 16px;
+    }
+    
+    .stay-grid {
+        padding: 0 16px;
+    }
+    
+    .stay-card {
+        margin-bottom: 24px;
+    }
+    
+    /* Mobile-specific button improvements */
+    .hero-buttons {
+        max-width: 100%;
+        padding: 0 16px;
+    }
+    
+    .dm-btn {
+        font-size: 0.9rem;
+        padding: 14px 20px;
+    }
+    
+    /* Image adjustments for small screens */
+    .feature-image,
+    .stay-card-image img {
+        height: 250px;
+        object-fit: cover;
     }
 }
 
