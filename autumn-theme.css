@@ -97,9 +97,77 @@ body {
     border-radius: 20px !important;
 }
 
-/* Newsletter - High quality Canadian forest with darker green overlay */
+/* Accommodation grid - ensure 3 columns on stay.html */
+.accommodation-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 30px !important;
+}
+
+.accommodation-card {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.accommodation-image {
+    height: 240px !important;
+}
+
+/* Amenity cards styling */
+.amenity-card {
+    background: white;
+    padding: 32px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.amenity-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.amenity-card i,
+.amenity-card svg {
+    margin-bottom: 16px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.amenity-card h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--moss-dark);
+    margin-bottom: 12px;
+}
+
+.amenity-card p {
+    font-size: 0.9375rem;
+    color: var(--color-stone-600);
+    line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+    .accommodation-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .amenities-grid.large {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .amenities-grid.large {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Newsletter/CTA - High quality Canadian forest with VERY dark green overlay */
 .newsletter-section {
-    background: linear-gradient(135deg, rgba(30, 45, 22, 0.92) 0%, rgba(40, 60, 30, 0.92) 100%),
+    background: linear-gradient(135deg, rgba(20, 30, 15, 0.94) 0%, rgba(30, 45, 22, 0.94) 100%),
                 url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1600&q=90') center/cover !important;
     background-attachment: fixed;
     position: relative;
@@ -110,7 +178,7 @@ body {
     position: absolute;
     inset: 0;
     background: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1600&q=90') center/cover;
-    filter: blur(3px) brightness(0.7);
+    filter: blur(3px) brightness(0.6);
     z-index: -1;
 }
 
