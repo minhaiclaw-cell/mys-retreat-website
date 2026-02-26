@@ -7,10 +7,10 @@
     <meta name="description" content="Experience the best family campground in Kearney, Ontario. MYS Retreat offers tent sites, RV sites, cottages, and RV rentals with creek access to Himbury Lake. Book your Ontario camping adventure today!">
     <meta name="keywords" content="campground Kearney Ontario, family camping Ontario, RV sites Ontario, tent camping Kearney, Himbury Lake camping, Algonquin Park camping, cottage rentals Ontario">
     
-    <!-- Fonts -->
+    <!-- Fonts - Creative Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -50,11 +50,13 @@
     <!-- 2026 Season Banner -->
     <div class="season-banner" id="seasonBanner">
         <div class="season-banner-content">
-            <i data-lucide="party-popper" style="width: 18px; height: 18px; display: inline-block; vertical-align: middle; margin-right: 8px;"></i>
+            <i data-lucide="party-popper" class="banner-icon" style="width: 18px; height: 18px;"></i>
             <strong>2026 Season Opening Soon!</strong> Book your summer getaway now • Reservations filling fast
             <a href="booking.html" class="dm-btn dm-btn-light" style="padding: 8px 20px; font-size: 12px;">Book Now</a>
         </div>
-        <button class="season-banner-close" id="closeBanner"><i data-lucide="x" style="width: 16px; height: 16px;"></i></button>
+        <button class="season-banner-close" id="closeBanner" aria-label="Close banner">
+            <i data-lucide="x" style="width: 16px; height: 16px;"></i>
+        </button>
     </div>
 
     <!-- Header -->
@@ -66,6 +68,7 @@
             <nav class="main-nav" id="mainNav">
                 <ul class="nav-container">
                     <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="stay.html" class="nav-link">Stay</a></li>
                     <li><a href="activities.html" class="nav-link">Activities</a></li>
                     <li><a href="faq.html" class="nav-link">FAQ</a></li>
                     <li><a href="map.html" class="nav-link">Map</a></li>
@@ -84,14 +87,14 @@
     <section class="hero-section" id="hero">
         <div class="hero-background">
             <img src="images/hero-bg.jpg" alt="MYS Retreat Campground aerial view of campsites and lake" class="hero-img">
-            <div class="hero-overlay"></div>
+            <div class="hero-overlay-diagonal"></div>
         </div>
         <div class="hero-content">
-            <p class="hero-subtitle">Welcome to MYS Retreat</p>
-            <h1 class="hero-title">A Family Campground in the Heart of Kearney</h1>
-            <p class="hero-subtitle" style="font-size: 16px; text-transform: none; letter-spacing: 0.05em; max-width: 600px; margin: 0 auto 40px;">Experience the beauty of Ontario's wilderness with creek access to Himbury Lake, surrounded by pine forests and stunning landscapes.</p>
+            <p class="hero-subtitle">Welcome to Nature's Paradise</p>
+            <h1 class="hero-title">A Family Campground <br><span class="font-accent">in the Heart of Kearney</span></h1>
+            <p class="hero-description">Experience the beauty of Ontario's wilderness with creek access to Himbury Lake, surrounded by pine forests and stunning landscapes.</p>
             <div class="hero-buttons">
-                <a href="booking.html" class="dm-btn dm-btn-light">Book Your Stay</a>
+                <a href="booking.html" class="dm-btn dm-btn-light dm-btn-arrow">Book Your Stay</a>
                 <a href="activities.html" class="dm-btn dm-btn-outline-light">Explore Activities</a>
             </div>
         </div>
@@ -104,21 +107,23 @@
     <!-- Welcome Section -->
     <section class="content-section welcome-section" id="welcome">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal">
                 <span class="section-label">About Us</span>
-                <h2 class="section-title">Experience Nature at MYS Retreat</h2>
+                <h2 class="section-title">Experience Nature at <span class="font-accent">MYS Retreat</span></h2>
                 <p class="section-text" style="max-width: 700px; margin-left: auto; margin-right: auto;">We are a family-oriented campground located in the heart of beautiful Kearney, Ontario with creek access to Himbury Lake. Whether you are a family or a solo traveler, we are here to make your stay an enjoyable occasion.</p>
             </div>
             <div class="row">
-                <div class="col col-text">
+                <div class="col col-text reveal stagger-1">
                     <span class="section-label">Welcome</span>
                     <h3 style="font-family: var(--font-heading); font-size: 2rem; margin-bottom: 20px;">Your Home Away From Home</h3>
                     <p class="section-text">Come and relax in this beautiful, fun, and friendly environment. Get in touch with the natural beauty of Kearney amidst pine forests, lakes, and stunning mountain landscapes.</p>
                     <p class="section-text">We are looking forward to hosting you and making your stay with us a memorable one! We would love to help you with a reservation for an enjoyable camping experience year-round!</p>
-                    <a href="booking.html" class="link-arrow">Book Your Stay</a>
+                    <a href="booking.html" class="link-arrow">Book Your Stay <i data-lucide="arrow-right" style="width: 18px; height: 18px;"></i></a>
                 </div>
-                <div class="col col-image">
-                    <img src="images/aerial.jpg" alt="Aerial view of MYS Retreat campground with campsites and lake" class="feature-image">
+                <div class="col col-image reveal stagger-2">
+                    <div class="feature-image-wrapper">
+                        <img src="images/aerial.jpg" alt="Aerial view of MYS Retreat campground with campsites and lake" class="feature-image">
+                    </div>
                 </div>
             </div>
         </div>
@@ -126,12 +131,12 @@
 
     <!-- Stay Section -->
     <section class="content-section stay-section" id="stay">
-        <div class="section-header">
+        <div class="section-header reveal">
             <span class="section-label">Stay</span>
-            <h2 class="section-title">Choose Your Experience</h2>
+            <h2 class="section-title">Choose Your <span class="font-accent">Experience</span></h2>
             <p class="section-text" style="max-width: 600px; margin-left: auto; margin-right: auto;">From cozy cottages to spacious RV sites, we have the perfect accommodation for your Ontario camping getaway.</p>
         </div>
-        <div class="stay-grid">
+        <div class="stay-grid reveal">
             <!-- Cottages -->
             <div class="stay-card stay-card-large">
                 <div class="stay-card-image">
@@ -143,7 +148,7 @@
                     <h3 class="stay-card-title">Get comfortable in our fully furnished cottages</h3>
                     <p class="stay-card-text">Enjoy modern comfort while having access to numerous trails and a private sandy beach, creating the perfect retreat for memorable moments with family and friends.</p>
                     <p class="stay-card-price">Starting from $125/night</p>
-                    <a href="booking.html" class="dm-btn dm-btn-light">Reserve a Cottage</a>
+                    <a href="stay.html" class="dm-btn dm-btn-light">Reserve a Cottage</a>
                 </div>
             </div>
             
@@ -158,7 +163,7 @@
                     <h3 class="stay-card-title">70 Camping Tent Sites</h3>
                     <p class="stay-card-text">Embrace the essence of outdoor adventure with our rustic and immersive tent sites amid the stunning landscape of Kearney, Ontario.</p>
                     <p class="stay-card-price">Starting from $45/night</p>
-                    <a href="booking.html" class="link-arrow">Book a Tent Site</a>
+                    <a href="stay.html" class="link-arrow">Book a Tent Site <i data-lucide="arrow-right" style="width: 18px; height: 18px;"></i></a>
                 </div>
             </div>
             
@@ -173,7 +178,7 @@
                     <h3 class="stay-card-title">35 RV Sites Available</h3>
                     <p class="stay-card-text">Discover comfort on wheels with our inviting RV sites offering the perfect blend of convenience and natural beauty in Ontario.</p>
                     <p class="stay-card-price">Starting from $65/night</p>
-                    <a href="booking.html" class="link-arrow">Book an RV Site</a>
+                    <a href="stay.html" class="link-arrow">Book an RV Site <i data-lucide="arrow-right" style="width: 18px; height: 18px;"></i></a>
                 </div>
             </div>
             
@@ -188,7 +193,7 @@
                     <h3 class="stay-card-title">5 RV Rentals</h3>
                     <p class="stay-card-text">Don't have an RV? No problem! Rent one of our fully-equipped RVs for the perfect outdoor experience in Kearney, Ontario.</p>
                     <p class="stay-card-price">Starting from $95/night</p>
-                    <a href="booking.html" class="link-arrow">Rent an RV</a>
+                    <a href="stay.html" class="link-arrow">Rent an RV <i data-lucide="arrow-right" style="width: 18px; height: 18px;"></i></a>
                 </div>
             </div>
         </div>
@@ -197,19 +202,19 @@
     <!-- Activities Preview Section -->
     <section class="content-section activities-section" id="activities">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal">
                 <span class="section-label">Experience</span>
-                <h2 class="section-title">Camping Activities</h2>
+                <h2 class="section-title">Camping <span class="font-accent">Activities</span></h2>
                 <p class="section-text" style="max-width: 600px; margin-left: auto; margin-right: auto;">Adventure awaits at every turn. Explore our wide range of outdoor activities for all ages.</p>
             </div>
             
-            <div class="activities-grid">
+            <div class="activities-grid reveal">
                 <div class="activity-card">
                     <div class="activity-image">
                         <img src="images/campfire.jpg" alt="Evening campfire gathering at MYS Retreat">
                     </div>
                     <div class="activity-content">
-                        <div class="activity-icon"><i data-lucide="flame" style="width: 32px; height: 32px; color: var(--color-accent);"></i></div>
+                        <div class="activity-icon"><i data-lucide="flame"></i></div>
                         <h3>Camp Fire</h3>
                         <p>Ignite your evenings with daily campfire gatherings at our family haven! Share stories, roast marshmallows, and create lasting memories.</p>
                     </div>
@@ -220,7 +225,7 @@
                         <img src="images/hiking.jpg" alt="Hiking trails through pine forest at Ontario campground">
                     </div>
                     <div class="activity-content">
-                        <div class="activity-icon"><i data-lucide="mountain" style="width: 32px; height: 32px; color: var(--color-accent);"></i></div>
+                        <div class="activity-icon"><i data-lucide="mountain"></i></div>
                         <h3>Hiking</h3>
                         <p>Embrace the wilderness with year-round trekking. Explore the natural trails surrounding our campground in every season.</p>
                     </div>
@@ -231,7 +236,7 @@
                         <img src="images/fishing.jpg" alt="Fishing at Himbury Lake Ontario">
                     </div>
                     <div class="activity-content">
-                        <div class="activity-icon"><i data-lucide="fish" style="width: 32px; height: 32px; color: var(--color-accent);"></i></div>
+                        <div class="activity-icon"><i data-lucide="fish"></i></div>
                         <h3>Fishing</h3>
                         <p>Cast away your worries with summer fishing bliss. Our location provides access to excellent fishing spots at Himbury Lake.</p>
                     </div>
@@ -242,7 +247,7 @@
                         <img src="images/kayaking.jpg" alt="Kayaking and canoeing on Himbury Lake">
                     </div>
                     <div class="activity-content">
-                        <div class="activity-icon"><i data-lucide="sailboat" style="width: 32px; height: 32px; color: var(--color-accent);"></i></div>
+                        <div class="activity-icon"><i data-lucide="sailboat"></i></div>
                         <h3>Kayaking & Canoeing</h3>
                         <p>Paddle into paradise. Explore the waters and enjoy the tranquility of nature from a different perspective.</p>
                     </div>
@@ -260,7 +265,7 @@
         <div class="explore-container">
             <div class="explore-content">
                 <span class="section-label">Explore</span>
-                <h2 class="section-title">Gateway to Algonquin Park</h2>
+                <h2 class="section-title">Gateway to <span class="font-accent">Algonquin Park</span></h2>
                 <p class="section-text">MYS Retreat is perfectly positioned as your gateway to adventure. Located near Algonquin Provincial Park, we offer easy access to one of Ontario's most beloved natural treasures.</p>
                 <p class="section-text">Our location provides the perfect base camp for exploring the region's stunning landscapes, abundant wildlife, and endless outdoor recreational opportunities.</p>
                 
@@ -286,7 +291,7 @@
             
             <div class="explore-map">
                 <a href="map.html">
-                    <img src="images/map.jpg" alt="MYS Retreat campground map with site locations">
+                    <img src="images/map.jpg" alt="MYS Retreat campground map with site locations" class="map-image">
                 </a>
             </div>
         </div>
@@ -296,7 +301,7 @@
     <section class="newsletter-section">
         <div class="container">
             <div class="newsletter-content">
-                <h2 class="section-title">Subscribe to Newsletter</h2>
+                <h2 class="section-title">Subscribe to Our <span class="font-accent">Newsletter</span></h2>
                 <p>Stay updated with the latest news, special offers, and events at MYS Retreat.</p>
                 
                 <form class="newsletter-form" id="newsletterForm">
@@ -312,11 +317,13 @@
         <div class="contact-container">
             <div class="contact-info">
                 <span class="section-label">Contact</span>
-                <h2 class="section-title">We Are Waiting For You!</h2>
+                <h2 class="section-title">We Are <span class="font-accent">Waiting For You!</span></h2>
                 
                 <div class="contact-details">
                     <div class="contact-item">
-                        <i data-lucide="map-pin" style="width: 24px; height: 24px;"></i>
+                        <div class="contact-icon">
+                            <i data-lucide="map-pin" style="width: 24px; height: 24px;"></i>
+                        </div>
                         <div class="contact-text">
                             <span class="contact-label">Location</span>
                             <p>2900 Highway 518, Kearney, Ontario</p>
@@ -324,7 +331,9 @@
                     </div>
                     
                     <div class="contact-item">
-                        <i data-lucide="phone" style="width: 24px; height: 24px;"></i>
+                        <div class="contact-icon">
+                            <i data-lucide="phone" style="width: 24px; height: 24px;"></i>
+                        </div>
                         <div class="contact-text">
                             <span class="contact-label">Phone</span>
                             <p><a href="tel:+12498886668">+1 (249) 888-6668</a></p>
@@ -332,7 +341,9 @@
                     </div>
                     
                     <div class="contact-item">
-                        <i data-lucide="mail" style="width: 24px; height: 24px;"></i>
+                        <div class="contact-icon">
+                            <i data-lucide="mail" style="width: 24px; height: 24px;"></i>
+                        </div>
                         <div class="contact-text">
                             <span class="contact-label">Email</span>
                             <p><a href="mailto:info@mysretreat.com">info@mysretreat.com</a></p>
@@ -340,7 +351,9 @@
                     </div>
                     
                     <div class="contact-item">
-                        <i data-lucide="clock" style="width: 24px; height: 24px;"></i>
+                        <div class="contact-icon">
+                            <i data-lucide="clock" style="width: 24px; height: 24px;"></i>
+                        </div>
                         <div class="contact-text">
                             <span class="contact-label">Hours</span>
                             <p>Monday-Sunday: 08:00 - 21:00</p>
@@ -368,8 +381,12 @@
                     <img src="images/logo.png" alt="MYS Retreat Family Campground" class="footer-logo">
                     <p>We are a family-oriented campground located in the heart of Kearney, Ontario, with beach-front access to beautiful Himbury Lake.</p>
                     <div class="social-links">
-                        <a href="#" aria-label="Facebook" class="social-link">FB</a>
-                        <a href="#" aria-label="Instagram" class="social-link">IG</a>
+                        <a href="#" aria-label="Facebook" class="social-link">
+                            <i data-lucide="facebook" style="width: 20px; height: 20px;"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram" class="social-link">
+                            <i data-lucide="instagram" style="width: 20px; height: 20px;"></i>
+                        </a>
                     </div>
                 </div>
                 
@@ -377,6 +394,7 @@
                     <h4>Quick Links</h4>
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
+                        <li><a href="stay.html">Stay</a></li>
                         <li><a href="activities.html">Activities</a></li>
                         <li><a href="faq.html">FAQ</a></li>
                         <li><a href="map.html">Map</a></li>
@@ -386,18 +404,23 @@
                 <div class="footer-col">
                     <h4>Ways to Stay</h4>
                     <ul class="footer-links">
-                        <li><a href="booking.html">Cottages</a></li>
-                        <li><a href="booking.html">Camping Tents</a></li>
-                        <li><a href="booking.html">RV Sites</a></li>
-                        <li><a href="booking.html">RV Rentals</a></li>
+                        <li><a href="stay.html">Cottages</a></li>
+                        <li><a href="stay.html">Camping Tents</a></li>
+                        <li><a href="stay.html">RV Sites</a></li>
+                        <li><a href="stay.html">RV Rentals</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-col footer-contact">
                     <h4>Contact</h4>
-                    <p><i data-lucide="phone" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> +1 (249) 888-6668<br>
-                    <i data-lucide="mail" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> info@mysretreat.com<br>
-                    <i data-lucide="map-pin" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> 2900 Highway 518, Kearney, ON</p>
+                    <p>
+                        <i data-lucide="phone" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> 
+                        +1 (249) 888-6668<br>
+                        <i data-lucide="mail" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> 
+                        info@mysretreat.com<br>
+                        <i data-lucide="map-pin" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> 
+                        2900 Highway 518, Kearney, ON
+                    </p>
                 </div>
             </div>
             
@@ -410,8 +433,12 @@
     <!-- Hero Popup for 2026 Season -->
     <div class="popup-overlay" id="heroPopup">
         <div class="popup-content">
-            <button class="popup-close" id="closePopup"><i data-lucide="x" style="width: 24px; height: 24px;"></i></button>
-            <div style="font-size: 3rem; margin-bottom: 20px; color: var(--color-accent);"><i data-lucide="party-popper" style="width: 48px; height: 48px;"></i></div>
+            <button class="popup-close" id="closePopup" aria-label="Close popup">
+                <i data-lucide="x" style="width: 24px; height: 24px;"></i>
+            </button>
+            <div class="popup-icon">
+                <i data-lucide="party-popper" style="width: 36px; height: 36px;"></i>
+            </div>
             <h2>2026 Season Opening Soon!</h2>
             <p>Get ready for another amazing season at MYS Retreat! Bookings are now open for summer 2026. Reserve your spot early for the best selection of campsites and cottages.</p>
             <a href="booking.html" class="dm-btn dm-btn-dark">Book Your Stay</a>
