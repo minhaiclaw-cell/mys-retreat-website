@@ -17,6 +17,8 @@
     
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="modern-enhancements.css">
+    <link rel="stylesheet" href="autumn-theme.css">
+    <link rel="stylesheet" href="weather-widget.css">
     <link rel="icon" type="image/png" href="images/logo.png">
     
     <!-- Schema.org Structured Data -->
@@ -83,6 +85,19 @@
             </button>
         </div>
     </header>
+
+    <!-- Weather Widget for Kearney, Ontario -->
+    <div class="weather-widget" id="weatherWidget">
+        <div class="weather-header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+            </svg>
+            <span>Kearney Weather</span>
+        </div>
+        <div class="weather-content" id="weatherContent">
+            <div class="weather-loading">Loading...</div>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero-section" id="hero">
@@ -447,6 +462,7 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="weather-widget.js"></script>
     <script>
         lucide.createIcons();
     </script>
