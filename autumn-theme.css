@@ -182,57 +182,49 @@ body {
     z-index: -1;
 }
 
-/* Explore section - Dark Algonquin Park photo with green highlights */
-.explore-section {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(44, 62, 31, 0.7) 100%),
-                url('https://images.unsplash.com/photo-1600077106724-946750eeaf8c?w=1600&q=80') center/cover !important;
-    background-attachment: fixed;
-    color: white !important;
+/* Property Overview Section - Clean white background */
+.property-overview {
+    background: white !important;
+    position: relative;
 }
 
-.explore-section::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: url('https://images.unsplash.com/photo-1600077106724-946750eeaf8c?w=1600&q=80') center/cover;
-    filter: blur(10px) brightness(0.6);
-    z-index: -1;
+.property-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
 }
 
-.explore-section * {
-    color: white !important;
+.stat-box {
+    text-align: center;
+    padding: 32px;
+    background: linear-gradient(135deg, rgba(74, 93, 35, 0.05) 0%, rgba(139, 69, 19, 0.05) 100%);
+    border-radius: 16px;
+    border: 2px solid rgba(74, 93, 35, 0.1);
+    transition: all 0.3s ease;
 }
 
-.explore-section .section-label {
-    background: rgba(74, 93, 35, 0.3);
-    color: rgba(255, 255, 255, 0.95) !important;
+.stat-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+    border-color: rgba(74, 93, 35, 0.2);
 }
 
-.explore-section .stat-number,
-.explore-section .stat-label,
-.explore-section .stat-icon {
-    color: white !important;
+.property-map-section img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2) !important;
 }
 
-/* Make map bigger and clearer */
-.explore-map {
-    flex: 1.2 !important;
-    max-width: 600px !important;
+@media (max-width: 1024px) {
+    .property-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
 }
 
-.map-image {
-    width: 100% !important;
-    height: auto !important;
-    border-radius: 16px !important;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5) !important;
-    opacity: 1 !important;
-    filter: none !important;
-}
-
-.stat-icon {
-    font-size: 2rem;
-    margin-bottom: 8px;
-    display: block;
+@media (max-width: 640px) {
+    .property-stats-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Activities section - Natural ground texture */
