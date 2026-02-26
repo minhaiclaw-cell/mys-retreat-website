@@ -1,0 +1,336 @@
+/* ========================================
+   Modern Sophisticated Enhancements
+   ======================================== */
+
+/* Enhanced Page Header with depth */
+.page-header {
+    background: linear-gradient(135deg, var(--color-forest-800) 0%, var(--color-forest-700) 50%, var(--color-moss-700) 100%), 
+                url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&q=80') center/cover;
+    padding: 140px 40px 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 30% 50%, rgba(74, 124, 40, 0.2) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.page-header-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: white;
+    margin: 20px 0 24px;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.page-header p {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Enhanced accommodation cards with sophisticated hover */
+.accommodation-card {
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.accommodation-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.accommodation-card.featured {
+    border: 2px solid var(--color-forest-600);
+}
+
+.accommodation-card.featured::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-forest-600) 0%, var(--color-moss-600) 100%);
+    z-index: 10;
+}
+
+/* Sophisticated image treatment */
+.accommodation-image {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+}
+
+.accommodation-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.4) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.accommodation-card:hover .accommodation-image::after {
+    opacity: 1;
+}
+
+.accommodation-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accommodation-card:hover .accommodation-image img {
+    transform: scale(1.08);
+}
+
+/* Badge with modern treatment */
+.accommodation-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, var(--color-forest-600) 0%, var(--color-forest-700) 100%);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 100px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+/* Refined typography */
+.accommodation-content h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--color-stone-900);
+    margin: 24px 0 16px;
+    letter-spacing: -0.01em;
+}
+
+.accommodation-desc {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-stone-600);
+    margin-bottom: 24px;
+}
+
+/* Enhanced feature list */
+.accommodation-features {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0;
+    display: grid;
+    gap: 12px;
+}
+
+.accommodation-features li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.9375rem;
+    color: var(--color-stone-700);
+    padding: 8px 0;
+}
+
+.accommodation-features li i,
+.accommodation-features li svg {
+    color: var(--color-forest-600);
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+}
+
+/* Modern button enhancements */
+.dm-btn-primary {
+    background: linear-gradient(135deg, var(--color-forest-600) 0%, var(--color-forest-700) 100%);
+    color: white;
+    padding: 14px 32px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    letter-spacing: 0.01em;
+    box-shadow: 0 4px 12px rgba(47, 86, 24, 0.3);
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.dm-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(47, 86, 24, 0.4);
+    background: linear-gradient(135deg, var(--color-forest-700) 0%, var(--color-forest-800) 100%);
+}
+
+/* Sophisticated section spacing */
+.content-section {
+    padding: 100px 40px;
+}
+
+.section-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 80px;
+}
+
+.section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 20px;
+    background: var(--color-forest-50);
+    color: var(--color-forest-700);
+    border-radius: 100px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.section-title {
+    font-size: 2.75rem;
+    font-weight: 600;
+    color: var(--color-stone-900);
+    margin: 24px 0;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+.section-text {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--color-stone-600);
+}
+
+/* Amenities grid modern treatment */
+.amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+    margin: 32px 0;
+}
+
+.amenity-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    background: var(--color-stone-50);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.amenity-item:hover {
+    background: white;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+.amenity-item i,
+.amenity-item svg {
+    color: var(--color-forest-600);
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.amenity-item span {
+    font-weight: 500;
+    color: var(--color-stone-800);
+    font-size: 0.9375rem;
+}
+
+/* Accommodation detail layout */
+.accommodation-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.accommodation-detail.reverse {
+    direction: rtl;
+}
+
+.accommodation-detail.reverse > * {
+    direction: ltr;
+}
+
+.accommodation-detail-image {
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.accommodation-detail-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.accommodation-detail:hover .accommodation-detail-image img {
+    transform: scale(1.05);
+}
+
+/* Price display enhancement */
+.price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-forest-700);
+    letter-spacing: -0.01em;
+}
+
+.accommodation-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+    margin-top: 24px;
+    border-top: 1px solid var(--color-stone-200);
+}
+
+/* Responsive refinements */
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2.25rem;
+    }
+    
+    .accommodation-detail {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .content-section {
+        padding: 60px 20px;
+    }
+}
