@@ -1009,9 +1009,42 @@ p {
     background-color: var(--color-stone-100);
 }
 
+/* Section header enhancements */
 .section-header {
     text-align: center;
     margin-bottom: 60px;
+    position: relative;
+}
+
+/* Decorative underline for section headers */
+.section-header .section-title {
+    position: relative;
+    display: inline-block;
+}
+
+.section-header .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--color-forest-500), transparent);
+    border-radius: 2px;
+}
+
+/* Decorative pine elements for section headers */
+.section-header::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 20px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 20'%3E%3Cpath d='M20 2 L24 18 L16 18 Z' fill='%234A7C28' fill-opacity='0.15'/%3E%3C/svg%3E") no-repeat center;
+    opacity: 0.8;
 }
 
 .section-header.left {
@@ -1073,18 +1106,34 @@ p {
 .welcome-section {
     background-color: white;
     position: relative;
+    /* Subtle linen/paper texture */
+    background-image: 
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
 }
 
 /* Decorative leaf pattern */
 .welcome-section::before {
     content: '';
     position: absolute;
-    top: 10%;
+    top: 5%;
     right: -5%;
-    width: 300px;
-    height: 300px;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 10 Q70 40 50 90 Q30 40 50 10' fill='%23D4EBC4' fill-opacity='0.3'/%3E%3C/svg%3E") no-repeat center;
-    opacity: 0.5;
+    width: 400px;
+    height: 400px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 10 Q70 40 50 90 Q30 40 50 10' fill='%234A7C28' fill-opacity='0.04'/%3E%3Cpath d='M50 20 Q60 40 50 70' stroke='%234A7C28' stroke-opacity='0.06' stroke-width='0.5' fill='none'/%3E%3C/svg%3E") no-repeat center;
+    opacity: 0.6;
+    pointer-events: none;
+    animation: leaf-sway 8s ease-in-out infinite;
+}
+
+/* Additional pine needle decoration */
+.welcome-section::after {
+    content: '';
+    position: absolute;
+    bottom: 10%;
+    left: -2%;
+    width: 200px;
+    height: 200px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg stroke='%232D5016' stroke-width='0.5' fill='none' opacity='0.1'%3E%3Cpath d='M20 80 L25 60 L30 80'/%3E%3Cpath d='M35 85 L40 65 L45 85'/%3E%3Cpath d='M15 70 L20 50 L25 70'/%3E%3C/g%3E%3C/svg%3E") no-repeat center;
     pointer-events: none;
 }
 
@@ -1121,6 +1170,9 @@ p {
     background-color: var(--color-stone-100);
     padding: var(--section-padding) 40px;
     position: relative;
+    /* Pine forest texture background */
+    background-image: 
+        url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%234A7C28' fill-opacity='0.03'%3E%3Cpath d='M60 10 L65 25 L55 25 Z M60 15 L70 35 L50 35 Z M60 25 L75 50 L45 50 Z'/%3E%3Cpath d='M20 30 L25 45 L15 45 Z M20 35 L30 55 L10 55 Z'/%3E%3Cpath d='M100 40 L105 55 L95 55 Z M100 45 L110 65 L90 65 Z'/%3E%3Ccircle cx='30' cy='80' r='2'/%3E%3Ccircle cx='90' cy='90' r='1.5'/%3E%3Ccircle cx='60' cy='100' r='1'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 /* Wave divider at bottom */
@@ -1133,6 +1185,17 @@ p {
     height: 80px;
     background: white;
     clip-path: ellipse(60% 100% at 50% 100%);
+}
+
+/* Organic texture overlay for stay section */
+.stay-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+        radial-gradient(ellipse at 20% 30%, rgba(74, 124, 40, 0.05) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 70%, rgba(61, 107, 66, 0.05) 0%, transparent 50%);
+    pointer-events: none;
 }
 
 .stay-grid {
@@ -1197,7 +1260,7 @@ p {
     transform: scale(1.08);
 }
 
-/* CRITICAL FIX: Enhanced overlay for text readability */
+/* Enhanced overlay for text readability with texture */
 .stay-card-overlay {
     position: absolute;
     top: 0;
@@ -1206,11 +1269,22 @@ p {
     height: 100%;
     background: linear-gradient(
         to top,
-        rgba(0, 0, 0, 0.95) 0%,
-        rgba(0, 0, 0, 0.7) 40%,
-        rgba(0, 0, 0, 0.3) 100%
+        rgba(0, 0, 0, 0.92) 0%,
+        rgba(0, 0, 0, 0.75) 35%,
+        rgba(0, 0, 0, 0.4) 65%,
+        rgba(0, 0, 0, 0.15) 100%
     );
     z-index: 1;
+}
+
+/* Add subtle pine texture to stay cards */
+.stay-card-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg stroke='%239BC77A' stroke-opacity='0.08' stroke-width='1'%3E%3Cpath d='M30 10 L32 18 L28 18 Z M30 12 L35 22 L25 22 Z'/%3E%3Cpath d='M10 30 L12 38 L8 38 Z M50 20 L52 28 L48 28 Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.6;
+    pointer-events: none;
 }
 
 .stay-card-content {
@@ -1221,6 +1295,7 @@ p {
 }
 
 /* CRITICAL FIX: ALL card text must be WHITE */
+/* CRITICAL FIX: White text for better contrast on dark overlay */
 .stay-card-label {
     font-size: 11px;
     font-weight: 600;
@@ -1228,7 +1303,7 @@ p {
     letter-spacing: 0.15em;
     display: block;
     margin-bottom: 12px;
-    color: var(--color-sage-300);
+    color: rgba(255, 255, 255, 0.85);
 }
 
 .stay-card-title {
@@ -1252,7 +1327,7 @@ p {
 .stay-card-price {
     font-size: 14px;
     font-weight: 600;
-    color: var(--color-sage-300);
+    color: rgba(255, 255, 255, 0.9);
     margin-bottom: 16px;
 }
 
@@ -1262,6 +1337,38 @@ p {
 .activities-section {
     background-color: white;
     position: relative;
+    /* Subtle wood grain texture */
+    background-image: 
+        linear-gradient(90deg, rgba(139, 115, 85, 0.02) 1px, transparent 1px),
+        linear-gradient(rgba(139, 115, 85, 0.02) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+/* Organic flowing shape decoration */
+.activities-section::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(to bottom, var(--color-stone-100), white);
+    clip-path: ellipse(70% 100% at 50% 0%);
+    z-index: 0;
+}
+
+/* Floating pine decoration */
+.activities-section::after {
+    content: '';
+    position: absolute;
+    top: 40%;
+    right: 5%;
+    width: 150px;
+    height: 150px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 15 L55 40 L45 40 Z M50 35 L60 65 L40 65 Z M50 60 L65 90 L35 90 Z' fill='%234A7C28' fill-opacity='0.04'/%3E%3C/svg%3E") no-repeat center;
+    opacity: 0.6;
+    pointer-events: none;
+    animation: float 6s ease-in-out infinite;
 }
 
 .activities-grid {
@@ -1270,14 +1377,39 @@ p {
     gap: 24px;
 }
 
+/* Enhanced activity cards with organic feel */
 .activity-card {
     background-color: white;
     border-radius: var(--radius-lg);
     overflow: hidden;
-    box-shadow: var(--shadow-md);
+    box-shadow: 
+        var(--shadow-md),
+        0 0 0 1px rgba(74, 124, 40, 0.05);
     transition: all var(--transition-base);
     border: 1px solid var(--color-border);
     position: relative;
+}
+
+/* Subtle wood grain texture on activity cards */
+.activity-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+        linear-gradient(90deg, rgba(139, 115, 85, 0.01) 1px, transparent 1px),
+        linear-gradient(rgba(139, 115, 85, 0.01) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.activity-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 
+        var(--shadow-xl),
+        0 0 0 1px rgba(74, 124, 40, 0.1);
+    border-color: var(--color-forest-200);
+    border-radius: var(--radius-xl);
 }
 
 .activity-card:hover {
@@ -1337,30 +1469,57 @@ p {
     margin-bottom: 0;
 }
 
-/* CRITICAL FIX: Icon on green background - WHITE */
+/* CRITICAL FIX: Icon on green background - WHITE with enhanced styling */
 .activity-icon {
-    width: 56px;
-    height: 56px;
-    background: linear-gradient(135deg, var(--color-forest-500) 0%, var(--color-forest-600) 100%);
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--color-forest-500) 0%, var(--color-forest-700) 100%);
     border-radius: var(--radius-md);
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 16px;
     color: white;
-    box-shadow: var(--shadow-forest);
+    box-shadow: 
+        var(--shadow-forest),
+        inset 0 1px 0 rgba(255,255,255,0.2);
     transition: all var(--transition-fast);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Bark texture overlay on activity icons */
+.activity-icon::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 2px,
+            rgba(0,0,0,0.05) 2px,
+            rgba(0,0,0,0.05) 4px
+        );
+    opacity: 0.5;
 }
 
 .activity-card:hover .activity-icon {
     transform: rotate(10deg) scale(1.1);
     border-radius: var(--radius-full);
+    box-shadow: 
+        0 14px 28px -8px rgba(45, 80, 22, 0.5),
+        inset 0 1px 0 rgba(255,255,255,0.3);
 }
 
 .activity-icon svg {
-    width: 26px;
-    height: 26px;
+    width: 28px;
+    height: 28px;
     color: white;
+    stroke-width: 2;
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2));
 }
 
 /* Activity Detail Cards - Asymmetric Layout */
@@ -2219,7 +2378,7 @@ p {
    EXPLORE SECTION (Homepage) - Enhanced Dark Section
    ======================================== */
 .explore-section {
-    background: linear-gradient(135deg, var(--color-forest-900) 0%, var(--color-forest-700) 100%);
+    background: linear-gradient(135deg, #1a2f1a 0%, #2d4a2d 50%, #1a331a 100%);
     background-size: 200% 200%;
     animation: gradient-shift 15s ease infinite;
     color: white;
@@ -2232,7 +2391,10 @@ p {
     content: '';
     position: absolute;
     inset: 0;
-    background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%2387A878' fill-opacity='0.12' fill-rule='evenodd'/%3E%3C/svg%3E");
+    background: 
+        url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M50 10 L55 30 L45 30 Z M50 25 L60 50 L40 50 Z'/%3E%3Ccircle cx='20' cy='80' r='1'/%3E%3Ccircle cx='80' cy='70' r='1.5'/%3E%3C/g%3E%3C/svg%3E"),
+        radial-gradient(ellipse at 30% 20%, rgba(74, 124, 40, 0.3) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 80%, rgba(45, 80, 22, 0.4) 0%, transparent 50%);
 }
 
 .explore-container {
@@ -2293,7 +2455,7 @@ p {
     font-family: var(--font-heading);
     font-size: 3.5rem;
     font-weight: 700;
-    color: var(--color-sage-300);
+    color: #c4e0c4;
     line-height: 1;
     text-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
@@ -3078,14 +3240,28 @@ p {
    V3 ADDITIONAL STYLES - Creative Enhancements
    ======================================== */
 
-/* Font accent for decorative text */
+/* Font accent for decorative text - enhanced */
 .font-accent {
     font-family: 'Caveat', cursive;
     font-weight: 500;
     color: var(--color-sage-300);
+    position: relative;
+    display: inline-block;
 }
 
-/* Hero overlay diagonal variant */
+.font-accent::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--color-sage-300), transparent);
+    opacity: 0.4;
+    border-radius: 2px;
+}
+
+/* Hero overlay diagonal variant - enhanced with texture */
 .hero-overlay-diagonal {
     position: absolute;
     top: 0;
@@ -3094,11 +3270,20 @@ p {
     height: 100%;
     background: linear-gradient(
         160deg,
-        rgba(0, 0, 0, 0.7) 0%,
-        rgba(0, 0, 0, 0.5) 40%,
-        rgba(45, 80, 22, 0.35) 100%
+        rgba(0, 0, 0, 0.75) 0%,
+        rgba(0, 0, 0, 0.55) 40%,
+        rgba(45, 80, 22, 0.4) 100%
     );
     z-index: 0;
+}
+
+/* Add subtle forest floor texture */
+.hero-overlay-diagonal::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239BC77A' fill-opacity='0.03'%3E%3Cpath d='M40 10 L42 20 L38 20 Z M40 12 L45 25 L35 25 Z'/%3E%3Ccircle cx='20' cy='60' r='1.5'/%3E%3Ccircle cx='60' cy='50' r='1'/%3E%3Ccircle cx='70' cy='70' r='1.5'/%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
 }
 
 .hero-overlay-diagonal::after {
