@@ -439,21 +439,32 @@ a:hover,
                 transparent 100%);
 }
 
-/* Hero static background - much lighter than video */
+/* Hero with optimized video - smaller, lighter */
 .hero-section {
     position: relative;
-    height: 80vh !important;
+    height: 65vh !important;
     width: 100vw;
     overflow: hidden;
 }
 
-.hero-image-bg {
+.hero-video {
     position: absolute;
-    inset: 0;
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
     z-index: 0;
+    pointer-events: none !important;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.hero-video[src] {
+    opacity: 1;
 }
 
 .hero-background {
@@ -462,6 +473,7 @@ a:hover,
     overflow: hidden;
     width: 100%;
     height: 100%;
+    background: url('images/hero-bg.jpg') center/cover no-repeat;
 }
 
 .hero-content {
@@ -477,7 +489,7 @@ a:hover,
 /* Scroll indicator centering */
 .scroll-indicator {
     position: absolute !important;
-    bottom: 40px !important;
+    bottom: 30px !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
     z-index: 3 !important;
@@ -504,7 +516,13 @@ a:hover,
 
 @media (max-width: 768px) {
     .hero-section {
-        height: 70vh !important;
+        height: 60vh !important;
+    }
+    
+    .hero-video {
+        width: 100vw;
+        height: 56.25vw;
+        min-height: 100vh;
     }
 }
 
