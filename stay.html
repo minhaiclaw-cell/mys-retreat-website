@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stay | MYS Retreat - Accommodations in Kearney, Ontario</title>
+    <meta name="description" content="Choose your perfect stay at MYS Retreat. Cottage rentals, RV sites, and tent camping on the beautiful Magnetawan River in Kearney, Ontario.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+<body>
+    <!-- 2026 Season Banner -->
+    <div class="season-banner" id="seasonBanner">
+        <div class="season-banner-content">
+            <i data-lucide="party-popper" class="banner-icon"></i>
+            <strong>2026 Season Opening Soon!</strong> Book your summer getaway now • Reservations filling fast
+            <a href="booking.html" class="dm-btn dm-btn-light">Book Now</a>
+        </div>
+        <button class="season-banner-close" id="closeBanner" aria-label="Close banner">
+            <i data-lucide="x"></i>
+        </button>
+    </div>
+
+    <!-- Header -->
+    <header class="dmHeader" id="dmHeader">
+        <div class="header-inner">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="MYS Retreat" class="logo-img"></a>
+            </div>
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-container">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="stay.html" class="nav-link active">Stay</a></li>
+                    <li><a href="activities.html" class="nav-link">Activities</a></li>
+                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li><a href="map.html" class="nav-link">Map</a></li>
+                    <li><a href="booking.html" class="nav-link nav-cta">Book Now</a></li>
+                </ul>
+            </nav>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-content">
+            <span class="section-label">
+                <i data-lucide="home"></i>
+                Accommodations
+            </span>
+            <h1>Choose Your Perfect Stay</h1>
+            <p>From cozy cottages to riverside campsites, find your ideal accommodation in the heart of Ontario's wilderness</p>
+        </div>
+    </section>
+
+    <!-- Accommodation Types Overview -->
+    <section class="content-section stay-overview">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">
+                    <i data-lucide="bed-double"></i>
+                    Our Accommodations
+                </span>
+                <h2 class="section-title">Something for Everyone</h2>
+                <p class="section-text">Whether you're seeking the comfort of a fully-equipped cottage, the convenience of an RV site with full hookups, or the authentic camping experience in a tent by the river, MYS Retreat has the perfect spot for your getaway.</p>
+            </div>
+
+            <div class="accommodation-grid">
+                <!-- Cottages -->
+                <div class="accommodation-card featured">
+                    <div class="accommodation-image">
+                        <img src="images/cottage.jpg" alt="Cozy cottage at MYS Retreat">
+                        <div class="accommodation-badge">Most Popular</div>
+                    </div>
+                    <div class="accommodation-content">
+                        <div class="accommodation-icon">
+                            <i data-lucide="home"></i>
+                        </div>
+                        <h3>Cottages</h3>
+                        <p class="accommodation-desc">Fully-equipped cottages with kitchen, bathroom, and comfortable sleeping arrangements. Perfect for families or those who want a home-away-from-home experience.</p>
+                        <ul class="accommodation-features">
+                            <li><i data-lucide="check"></i> 2-3 bedrooms</li>
+                            <li><i data-lucide="check"></i> Full kitchen & bathroom</li>
+                            <li><i data-lucide="check"></i> Private deck with river views</li>
+                            <li><i data-lucide="check"></i> Air conditioning & heating</li>
+                            <li><i data-lucide="check"></i> BBQ grill included</li>
+                        </ul>
+                        <div class="accommodation-footer">
+                            <span class="price">From $180/night</span>
+                            <a href="booking.html?type=cottage" class="dm-btn dm-btn-primary">Book Cottage</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RV Sites -->
+                <div class="accommodation-card">
+                    <div class="accommodation-image">
+                        <img src="images/rv-site.jpg" alt="RV site at MYS Retreat">
+                    </div>
+                    <div class="accommodation-content">
+                        <div class="accommodation-icon">
+                            <i data-lucide="caravan"></i>
+                        </div>
+                        <h3>RV Sites</h3>
+                        <p class="accommodation-desc">Spacious RV sites with full hookups including water, electricity (30/50 amp), and sewer. Enjoy the comforts of your RV with all the beauty of the campground.</p>
+                        <ul class="accommodation-features">
+                            <li><i data-lucide="check"></i> Full hookups (water/electric/sewer)</li>
+                            <li><i data-lucide="check"></i> 30 & 50 amp service</li>
+                            <li><i data-lucide="check"></i> Fire pit & picnic table</li>
+                            <li><i data-lucide="check"></i> Riverfront options available</li>
+                            <li><i data-lucide="check"></i> Pull-through sites</li>
+                        </ul>
+                        <div class="accommodation-footer">
+                            <span class="price">From $55/night</span>
+                            <a href="booking.html?type=rv" class="dm-btn dm-btn-primary">Book RV Site</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tent Camping -->
+                <div class="accommodation-card">
+                    <div class="accommodation-image">
+                        <img src="images/tent-camping.jpg" alt="Tent camping at MYS Retreat">
+                    </div>
+                    <div class="accommodation-content">
+                        <div class="accommodation-icon">
+                            <i data-lucide="tent"></i>
+                        </div>
+                        <h3>Tent Sites</h3>
+                        <p class="accommodation-desc">Traditional camping at its finest. Set up your tent on our well-maintained sites, many with direct river access. Fall asleep to the sound of flowing water.</p>
+                        <ul class="accommodation-features">
+                            <li><i data-lucide="check"></i> Riverside & forest options</li>
+                            <li><i data-lucide="check"></i> Fire pit & picnic table</li>
+                            <li><i data-lucide="check"></i> Shared washroom facilities</li>
+                            <li><i data-lucide="check"></i> Potable water nearby</li>
+                            <li><i data-lucide="check"></i> Pet-friendly sites</li>
+                        </ul>
+                        <div class="accommodation-footer">
+                            <span class="price">From $35/night</span>
+                            <a href="booking.html?type=tent" class="dm-btn dm-btn-primary">Book Tent Site</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Cottage Section -->
+    <section class="content-section alt">
+        <div class="container">
+            <div class="accommodation-detail">
+                <div class="accommodation-detail-image">
+                    <img src="images/cottage-interior.jpg" alt="Cottage interior">
+                </div>
+                <div class="accommodation-detail-content">
+                    <span class="section-label">
+                        <i data-lucide="star"></i>
+                        Premium Comfort
+                    </span>
+                    <h2>Cottage Rentals</h2>
+                    <p>Our cottages offer the perfect blend of rustic charm and modern convenience. Each cottage is uniquely decorated and fully equipped with everything you need for a comfortable stay.</p>
+                    
+                    <h4>What's Included:</h4>
+                    <div class="amenities-grid">
+                        <div class="amenity-item">
+                            <i data-lucide="utensils"></i>
+                            <span>Fully equipped kitchen</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i data-lucide="bath"></i>
+                            <span>Private bathroom</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i data-lucide="bed-double"></i>
+                            <span>Quality bedding</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i data-lucide="tv"></i>
+                            <span>TV & WiFi</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i data-lucide="flame"></i>
+                            <span>Fire pit outside</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i data-lucide="parking-circle"></i>
+                            <span>Private parking</span>
+                        </div>
+                    </div>
+
+                    <div class="detail-cta">
+                        <a href="booking.html?type=cottage" class="dm-btn dm-btn-primary">View Cottage Availability</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RV Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="accommodation-detail reverse">
+                <div class="accommodation-detail-content">
+                    <span class="section-label">
+                        <i data-lucide="zap"></i>
+                        Full Hookups
+                    </span>
+                    <h2>RV Sites</h2>
+                    <p>Bring your home on wheels to one of our spacious RV sites. With full hookups and beautiful surroundings, you get the best of both worlds - RV comfort and natural beauty.</p>
+                    
+                    <h4>Site Features:</h4>
+                    <ul class="feature-list">
+                        <li>Level, gravel pads for easy setup</li>
+                        <li>30 and 50 amp electrical service</li>
+                        <li>City water hookup</li>
+                        <li>Sewer connection</li>
+                        <li>Fire pit and picnic table at each site</li>
+                        <li>Some sites offer direct river access</li>
+                    </ul>
+
+                    <div class="detail-cta">
+                        <a href="booking.html?type=rv" class="dm-btn dm-btn-primary">View RV Site Map</a>
+                    </div>
+                </div>
+                <div class="accommodation-detail-image">
+                    <img src="images/rv-river.jpg" alt="RV by the river">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tent Camping Section -->
+    <section class="content-section alt">
+        <div class="container">
+            <div class="accommodation-detail">
+                <div class="accommodation-detail-image">
+                    <img src="images/tent-stars.jpg" alt="Tent camping under stars">
+                </div>
+                <div class="accommodation-detail-content">
+                    <span class="section-label">
+                        <i data-lucide="trees"></i>
+                        Back to Nature
+                    </span>
+                    <h2>Tent Camping</h2>
+                    <p>Experience camping the way it was meant to be. Our tent sites offer beautiful settings, from riverside locations to forest clearings. Wake up to birdsong and fall asleep under the stars.</p>
+                    
+                    <h4>Camping Options:</h4>
+                    <ul class="feature-list">
+                        <li>Riverside sites with water access</li>
+                        <li>Shaded forest sites</li>
+                        <li>Open meadow sites for stargazing</li>
+                        <li>Group camping areas available</li>
+                        <li>Walk-in sites for extra privacy</li>
+                    </ul>
+
+                    <div class="detail-cta">
+                        <a href="booking.html?type=tent" class="dm-btn dm-btn-primary">View Tent Sites</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">
+                    <i data-lucide="sparkles"></i>
+                    For All Guests
+                </span>
+                <h2 class="section-title">Resort Amenities</h2>
+                <p class="section-text">No matter where you stay, all guests have access to our great amenities</p>
+            </div>
+
+            <div class="amenities-grid large">
+                <div class="amenity-card">
+                    <i data-lucide="waves"></i>
+                    <h4>River Access</h4>
+                    <p>Direct access to the Magnetawan River for swimming, fishing, and paddling</p>
+                </div>
+                <div class="amenity-card">
+                    <i data-lucide="flame"></i>
+                    <h4>Fire Pits</h4>
+                    <p>Every site includes a fire pit - firewood available for purchase</p>
+                </div>
+                <div class="amenity-card">
+                    <i data-lucide="shower-head"></i>
+                    <h4>Washrooms</h4>
+                    <p>Clean, modern washroom and shower facilities</p>
+                </div>
+                <div class="amenity-card">
+                    <i data-lucide="store"></i>
+                    <h4>General Store</h4>
+                    <p>Essentials, snacks, ice, and camping supplies</p>
+                </div>
+                <div class="amenity-card">
+                    <i data-lucide="wifi"></i>
+                    <h4>WiFi</h4>
+                    <p>Free WiFi in common areas (limited in remote sites)</p>
+                </div>
+                <div class="amenity-card">
+                    <i data-lucide="dog"></i>
+                    <h4>Pet Friendly</h4>
+                    <p>Bring your furry friends - pets welcome at most sites</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2 class="section-title">Ready to Book Your Stay?</h2>
+                <p>Reserve your perfect accommodation today. Summer weekends fill up fast!</p>
+                <a href="booking.html" class="dm-btn dm-btn-light" style="margin-top: 1.5rem;">Check Availability</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="dmFooter">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="images/logo.png" alt="MYS Retreat" class="footer-logo">
+                    <p>A family-oriented campground in the heart of beautiful Kearney, Ontario. Create memories that last a lifetime.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="stay.html">Stay</a></li>
+                        <li><a href="activities.html">Activities</a></li>
+                        <li><a href="map.html">Map</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Information</h4>
+                    <ul class="footer-links">
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
+                        <li><a href="policies.html">Policies</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i data-lucide="map-pin"></i> 1234 Campground Road<br>Kearney, Ontario P0A 1M0</p>
+                    <p><i data-lucide="phone"></i> <a href="tel:+17051234567">(705) 123-4567</a></p>
+                    <p><i data-lucide="mail"></i> <a href="mailto:info@mysretreat.ca">info@mysretreat.ca</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MYS Retreat. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
