@@ -30,17 +30,18 @@
 
 /* Remove ALL pine tree patterns, replace with real textures */
 
-/* Season Banner - Moss Texture */
+/* Season Banner - Moss Texture with Heavy Blur */
 .season-banner {
     background: linear-gradient(135deg, rgba(44, 62, 31, 0.92) 0%, rgba(58, 82, 40, 0.92) 100%), 
-                url('https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=800&q=80') center/cover;
+                url('https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=800&q=80&blur=50') center/cover;
     background-blend-mode: multiply;
 }
 
 .season-banner::before {
     background: url('https://images.unsplash.com/photo-1516714819001-8ee7a13b71d7?w=400&q=80') center/cover;
-    opacity: 0.2;
+    opacity: 0.15;
     mix-blend-mode: overlay;
+    filter: blur(20px);
 }
 
 /* Page Header - Autumn Forest Texture */
@@ -65,17 +66,37 @@
     background: none !important;
 }
 
-/* Newsletter - Autumn leaves texture */
+/* Newsletter - High quality Canadian forest */
 .newsletter-section {
-    background: linear-gradient(135deg, rgba(74, 93, 35, 0.92) 0%, rgba(139, 69, 19, 0.92) 100%),
-                url('https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?w=1600&q=80') center/cover;
+    background: linear-gradient(135deg, rgba(44, 62, 31, 0.88) 0%, rgba(58, 82, 40, 0.88) 100%),
+                url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1600&q=90') center/cover !important;
+    background-attachment: fixed;
 }
 
-/* Explore section - Wood grain texture */
+.newsletter-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1600&q=90') center/cover;
+    filter: blur(2px);
+    z-index: -1;
+}
+
+/* Explore section - Blurred moss texture */
 .explore-section {
-    background: linear-gradient(180deg, rgba(245, 243, 240, 0.98) 0%, rgba(255, 255, 255, 0.98) 100%),
-                url('https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=1600&q=80') center/cover;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, rgba(250, 248, 245, 0.92) 100%),
+                url('https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=1600&q=80') center/cover !important;
     background-attachment: fixed;
+}
+
+.explore-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=1600&q=80') center/cover;
+    filter: blur(8px);
+    z-index: -1;
+    opacity: 0.4;
 }
 
 /* Activities section - Natural ground texture */
@@ -84,12 +105,87 @@
                 url('https://images.unsplash.com/photo-1511497584788-876760111969?w=1600&q=80') center/cover;
 }
 
-/* Remove all decorative pine elements */
+/* Remove all decorative pine elements and patterns */
 .section-header::before,
 .section-header::after,
 .hero-content::before,
-.stay-card::before {
+.stay-card::before,
+.welcome-section::before,
+.stay-section::after,
+.activities-preview::before,
+.newsletter-section::after,
+.explore-section::after {
     display: none !important;
+    background: none !important;
+}
+
+/* Fix section label positioning - above section titles */
+.section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-label {
+    order: -1;
+    margin-bottom: 16px !important;
+}
+
+.section-title {
+    order: 1;
+}
+
+.section-text {
+    order: 2;
+}
+
+/* Improve spacing and layout */
+.content-section {
+    padding: 80px 40px !important;
+}
+
+.section-header {
+    margin-bottom: 60px !important;
+}
+
+/* Logo centering fix - stronger rules */
+.logo {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    height: 100% !important;
+}
+
+.logo a {
+    display: flex !important;
+    align-items: center !important;
+    height: 100% !important;
+}
+
+.logo-img {
+    display: block !important;
+    vertical-align: middle !important;
+    height: 56px !important;
+    width: auto !important;
+}
+
+/* Header inner flex alignment */
+.header-inner {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+}
+
+/* Newsletter section - position relative for ::before */
+.newsletter-section {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Explore section - position relative for ::before */
+.explore-section {
+    position: relative;
+    overflow: hidden;
 }
 
 /* Update primary colors to autumn/moss theme */
@@ -126,10 +222,15 @@ a:hover,
     color: var(--autumn-copper) !important;
 }
 
-/* Footer - Dark bark texture */
+/* Footer - Match logo colors (remove brown) */
 .dmFooter {
-    background: linear-gradient(180deg, rgba(46, 35, 31, 0.98) 0%, rgba(62, 39, 35, 0.98) 100%),
-                url('https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?w=1600&q=80') center/cover;
+    background: linear-gradient(180deg, rgba(44, 62, 31, 0.96) 0%, rgba(58, 82, 40, 0.96) 100%),
+                url('https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=1600&q=80') center/cover !important;
+}
+
+.footer-logo {
+    height: 80px !important;
+    width: auto !important;
 }
 
 /* Contact section - Subtle moss */
@@ -164,11 +265,26 @@ a:hover,
     color: var(--autumn-rust);
 }
 
-/* Remove pattern backgrounds */
+/* Remove ALL pattern backgrounds - override base styles */
 .welcome-section::before,
 .stay-section::after,
-.activities-preview::before {
+.activities-preview::before,
+.stay-card-overlay::after,
+*[style*="data:image/svg"],
+.section-header::before,
+.section-header::after,
+.hero-content::before,
+.hero-content::after,
+.stay-card::before,
+.stay-card::after,
+.newsletter-section::after,
+.contact-section::before,
+.contact-section::after,
+.dmFooter::before,
+.dmFooter::after {
     background: none !important;
+    background-image: none !important;
+    display: none !important;
 }
 
 /* CTA buttons autumn theme */
